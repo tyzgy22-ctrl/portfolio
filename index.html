@@ -41,12 +41,12 @@ header .btn{padding:10px 18px;font-size:14px;border-radius:12px}
 #intro{height:360vh;position:relative}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 #film{position:absolute;inset:0;width:100%;height:100%}
-.hint{position:absolute;left:0;right:0;bottom:6vh;text-align:center;color:var(--muted);font-size:14px;letter-spacing:.08em}
-.hint i{display:block;width:22px;height:36px;border:2px solid rgba(255,255,255,.3);border-radius:12px;margin:0 auto 10px;position:relative}
+.hint{position:absolute;left:0;right:0;bottom:6vh;text-align:center;color:#e6eaf1;font-size:14px;font-weight:700;letter-spacing:.08em;text-shadow:0 1px 12px rgba(0,0,0,.9)}
+.hint i{display:block;width:22px;height:36px;border:2px solid rgba(255,255,255,.6);border-radius:12px;margin:0 auto 10px;position:relative}
 .hint i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--acc);animation:wheel 1.6s infinite}
 @keyframes wheel{to{transform:translateY(12px);opacity:0}}
 .top-tag{position:absolute;top:110px;left:0;right:0;text-align:center;font-family:Unbounded;font-size:clamp(22px,4vw,44px);opacity:.95;text-shadow:0 2px 30px rgba(0,0,0,.6)}
-.top-tag small{display:block;font-family:Manrope;font-size:14px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;margin-top:10px}
+.top-tag small{display:table;margin:16px auto 0;font-family:Manrope;font-size:13px;font-weight:700;color:#fff;letter-spacing:.18em;text-transform:uppercase;padding:9px 18px;border-radius:30px;background:rgba(13,15,20,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);text-shadow:none}
 .hero{position:absolute;inset:0;display:flex;align-items:center;opacity:0;pointer-events:none}
 .hero.on{pointer-events:auto}
 .hero .wrap{width:100%}
@@ -296,7 +296,7 @@ function draw(force){
   // на узком экране сначала показываем ноутбук целиком, к концу заполняем экран
   const q = want / (N - 1), k = q < .55 ? 0 : ease(clamp((q - .55) / .45));
   const s = fit + (cover - fit) * k, w = iw * s, h = ih * s, x = (cv.width - w) / 2, y = (cv.height - h) / 2;
-  ctx.fillStyle = '#0d0f14'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.imageSmoothingQuality = 'high'; ctx.fillStyle = '#0d0f14'; ctx.fillRect(0, 0, cv.width, cv.height);
   ctx.drawImage(im, x, y, w, h);
   if(y > 0){
     const f = Math.min(h * .25, 220 * (devicePixelRatio || 1));

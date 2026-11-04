@@ -175,15 +175,15 @@ try:
 except TypeError as e:
     print(e); sc.render.engine = "BLENDER_EEVEE_NEXT"
 try:
-    sc.eevee.taa_render_samples = 24 if not PREVIEW else 8
+    sc.eevee.taa_render_samples = 96 if not PREVIEW else 8
     sc.eevee.use_raytracing = True
 except AttributeError:
     pass
 sc.view_settings.view_transform = "Standard"
-sc.render.resolution_x, sc.render.resolution_y = 1600, 900
+sc.render.resolution_x, sc.render.resolution_y = 1920, 1080
 sc.render.resolution_percentage = 100
 sc.render.image_settings.file_format = "JPEG"
-sc.render.image_settings.quality = 80
+sc.render.image_settings.quality = 95
 os.makedirs(OUT, exist_ok=True)
 if PREVIEW:
     for f in (1, 40, 70, 105, 130, FRAMES):
