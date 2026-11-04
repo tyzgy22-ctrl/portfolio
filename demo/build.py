@@ -46,6 +46,41 @@ ART = {
   <rect x="95" y="40" width="110" height="220" rx="22" fill="var(--text)"/><rect x="104" y="58" width="92" height="180" rx="10" fill="var(--bg)"/>
   <path d="M110 80l40 50-25 20 50 60" stroke="var(--acc)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   <g transform="translate(205 205) rotate(40)"><rect x="-8" y="-60" width="16" height="70" rx="4" fill="var(--acc2)"/><rect x="-14" y="5" width="28" height="40" rx="8" fill="var(--acc)"/></g></svg>''',
+ # скифский олень в «зверином стиле»
+ "deer": '''<svg viewBox="0 0 300 300" class="art"><circle cx="150" cy="150" r="138" fill="none" stroke="var(--acc)" stroke-width="2" stroke-dasharray="4 8"/>
+  <circle cx="150" cy="150" r="118" fill="var(--card)"/>
+  <g fill="none" stroke="var(--acc)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M132 132C118 112 104 96 98 70M110 100C96 98 84 90 78 78M102 84C104 70 100 58 92 50M120 116C106 120 92 118 80 110"/>
+  <path d="M168 132C182 112 196 96 202 70M190 100C204 98 216 90 222 78M198 84C196 70 200 58 208 50M180 116C194 120 208 118 220 110"/></g>
+  <path d="M150 128c-16 0-26 10-26 24c0 20 10 46 26 70c16-24 26-50 26-70c0-14-10-24-26-24z" fill="var(--acc)"/>
+  <path d="M126 140c-14-4-24 0-30 8c10 4 20 4 30 0zM174 140c14-4 24 0 30 8c-10 4-20 4-30 0z" fill="var(--acc2)"/>
+  <g fill="var(--bg)"><circle cx="140" cy="158" r="4"/><circle cx="160" cy="158" r="4"/><ellipse cx="150" cy="208" rx="7" ry="5"/></g>
+  <path d="M60 252h180" stroke="var(--line)" stroke-width="3"/></svg>''',
+ # две капли туши, которые тянутся друг к другу
+ "between": '''<svg viewBox="0 0 300 300" class="art"><defs><linearGradient id="bt" x1="0" x2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs>
+  <circle cx="115" cy="150" r="78" fill="none" stroke="var(--text)" stroke-width="3"/><circle cx="185" cy="150" r="78" fill="none" stroke="var(--text)" stroke-width="3"/>
+  <path d="M150 80a78 78 0 0 1 0 140a78 78 0 0 1 0-140z" fill="url(#bt)"/>
+  <g stroke="var(--text)" stroke-width="3" stroke-linecap="round"><path d="M150 30v22M150 248v22"/></g>
+  <circle cx="150" cy="150" r="6" fill="var(--bg)"/></svg>''',
+ # детская студия: кубики, нота, кисть
+ "kids": '''<svg viewBox="0 0 300 300" class="art"><circle cx="150" cy="150" r="132" fill="var(--acc2)" opacity=".18"/>
+  <g transform="rotate(-8 110 190)"><rect x="70" y="150" width="80" height="80" rx="14" fill="var(--acc)"/><text x="110" y="208" text-anchor="middle" font-size="50" font-weight="700" fill="#fff" font-family="Manrope">А</text></g>
+  <g transform="rotate(10 195 200)"><rect x="160" y="165" width="70" height="70" rx="12" fill="var(--acc3)"/><text x="195" y="216" text-anchor="middle" font-size="42" font-weight="700" fill="#fff" font-family="Manrope">B</text></g>
+  <g transform="rotate(4 140 110)"><rect x="105" y="75" width="70" height="70" rx="12" fill="var(--acc2)"/><text x="140" y="126" text-anchor="middle" font-size="40" font-weight="700" fill="#fff" font-family="Manrope">学</text></g>
+  <g fill="var(--text)"><circle cx="225" cy="105" r="11"/><rect x="233" y="50" width="5" height="56" rx="2"/><path d="M236 50c14 4 20 12 18 24c-4-8-10-10-18-10z"/></g>
+  <g fill="var(--acc)"><circle cx="62" cy="88" r="6"/><circle cx="250" cy="250" r="5"/><circle cx="48" cy="240" r="4"/></g></svg>''',
+ # мастерская: ботинок, ключ, часы
+ "shoe": '''<svg viewBox="0 0 300 300" class="art"><circle cx="150" cy="150" r="132" fill="var(--acc)" opacity=".12"/>
+  <path d="M60 205c0-25 2-60 8-85h45c3 20 15 35 40 42l70 18c18 5 27 15 27 30v8H60z" fill="var(--acc)"/>
+  <path d="M60 205h190v14H60z" fill="var(--text)"/><g stroke="var(--bg)" stroke-width="3" stroke-linecap="round" opacity=".7"><path d="M118 140l14 4M126 128l14 4M134 116l14 4"/></g>
+  <g transform="translate(205 70) rotate(35)"><circle r="18" fill="none" stroke="var(--acc2)" stroke-width="7"/><rect x="-4" y="16" width="8" height="52" rx="3" fill="var(--acc2)"/><rect x="4" y="50" width="12" height="6" fill="var(--acc2)"/><rect x="4" y="60" width="9" height="6" fill="var(--acc2)"/></g>
+  <g transform="translate(95 75)"><circle r="26" fill="var(--card)" stroke="var(--text)" stroke-width="5"/><path d="M0-14v14l10 6" stroke="var(--acc)" stroke-width="4" stroke-linecap="round" fill="none"/></g></svg>''',
+ # иероглиф «учитель» 老师 + латиница
+ "hanzi": '''<svg viewBox="0 0 300 300" class="art"><rect x="30" y="30" width="240" height="240" rx="36" fill="var(--acc)"/>
+  <g stroke="#fff" stroke-opacity=".25" stroke-width="2" stroke-dasharray="6 6"><path d="M150 30v240M30 150h240M30 30l240 240M270 30L30 270"/></g>
+  <text x="150" y="182" text-anchor="middle" font-size="96" fill="#fff" font-family="'Noto Serif SC','Songti SC',serif" font-weight="700">老师</text>
+  <text x="150" y="245" text-anchor="middle" font-size="22" fill="#fff" opacity=".85" font-family="Manrope" font-weight="700" letter-spacing="6">LǍOSHĪ</text>
+  <circle cx="242" cy="58" r="14" fill="var(--acc2)"/></svg>''',
 }
 
 SITES = [
@@ -113,13 +148,59 @@ SITES = [
       cta="Узнать цену ремонта",
       feats=[("Цены на виду", "Клиент сразу видит стоимость своего ремонта"), ("Заявка в WhatsApp", "Модель и поломка одной кнопкой"), ("Гарантия", "Условия гарантии понятным текстом")],
       services=[("Замена экрана", "от 2 500 ₽"), ("Замена батареи", "от 1 500 ₽"), ("Замена разъёма зарядки", "от 1 200 ₽"), ("Чистка после воды", "от 1 000 ₽"), ("Диагностика", "бесплатно"), ("Наклейка стекла", "от 500 ₽")]),
+ # --- 04.11.2026: компании без сайта, данные из 2ГИС (рубрики, услуги, часы) ---
+ dict(slug="terra-skifika", name="Терра Скифика", kind="Студия татуировки и пирсинга", art="deer", h1=70,
+      addr="Мебельная улица, 47 к1, офис 16Н", rating="5,0", reviews=29, link="https://2gis.ru/spb/firm/5348552838670964",
+      hours="ежедневно 11:00-20:00",
+      fonts="Cormorant+SC:wght@600;700&family=Manrope:wght@400;500;700", hfont="Cormorant SC", bfont="Manrope", upper=False,
+      c=dict(bg="#14110d", card="#1d1913", text="#efe4cf", muted="#a8997f", acc="#d4a24c", acc2="#e8c27a", acc3="#d4a24c", line="#2e271d", leaf="#000"),
+      title="Татуировка, которая останется с вами навсегда", sub="Тату, пирсинг и удаление старых работ на Мебельной. Портфолио мастеров, прайс и запись онлайн, а не только через YClients.",
+      cta="Записаться на сеанс",
+      feats=[("Портфолио мастеров", "Работы по стилям, чтобы клиент пришёл уже с идеей"), ("Пирсинг и украшения", "Виды проколов и украшения в наличии с ценами"), ("Удаление тату", "Отдельная страница про удаление тату и перманента")],
+      services=[("Тату мини", "от 4 000 ₽"), ("Тату по эскизу", "от 8 000 ₽"), ("Прокол уха", "от 1 500 ₽"), ("Септум, нос, хрящ", "от 2 000 ₽"), ("Удаление тату", "от 2 500 ₽"), ("Удаление перманента", "от 2 000 ₽")]),
+ dict(slug="mezhdu-nami", name="Между нами", kind="Тату и пирсинг", art="between", h1=56,
+      addr="Лиговский проспект, 74, 2 этаж", rating="5,0", reviews=17, link="https://2gis.ru/spb/firm/70000001098258366",
+      hours="ежедневно 13:00-21:00",
+      fonts="Unbounded:wght@500;700&family=Inter:wght@400;500;700", hfont="Unbounded", bfont="Inter", upper=False,
+      c=dict(bg="#f3efe9", card="#ffffff", text="#1d1b1a", muted="#77706a", acc="#d6336c", acc2="#7b5cff", acc3="#d6336c", line="#e5ddd3", leaf="#000"),
+      title="Тату и пирсинг, о которых знаем только мы с вами", sub="Небольшая студия на Лиговском, 74. Все виды проколов, тату и спокойная атмосфера без спешки. Записывайтесь в пару касаний.",
+      cta="Записаться",
+      feats=[("Все проколы на одной странице", "Ухо, хрящ, нос, септум, язык, пупок: с ценой и фото"), ("Работы мастеров", "Галерея тату, чтобы выбрать стиль заранее"), ("Как подготовиться", "Памятка до и после сеанса, чтобы не спрашивали в директ")],
+      services=[("Прокол уха", "от 1 500 ₽"), ("Хрящ уха", "от 2 000 ₽"), ("Нос / септум", "от 2 000 ₽"), ("Язык / пупок", "от 2 500 ₽"), ("Мини-тату", "от 4 000 ₽"), ("Тату по эскизу", "от 7 000 ₽")]),
+ dict(slug="aivengo", name="Айвенго", kind="Студия эстетического и раннего развития", art="kids", h1=64,
+      addr="улица Грибалёвой, 7 к1", rating="5,0", reviews=27, link="https://2gis.ru/spb/firm/70000001055791232",
+      hours="ежедневно 10:00-21:00",
+      fonts="Nunito:wght@600;800&family=Manrope:wght@400;500;700", hfont="Nunito", bfont="Manrope", upper=False,
+      c=dict(bg="#fbf7f0", card="#ffffff", text="#22303f", muted="#6f7c8a", acc="#ff7a59", acc2="#3fb6a8", acc3="#6c8cff", line="#efe6d8", leaf="#000"),
+      title="Здесь ребёнок растёт с удовольствием", sub="Подготовка к школе, английский и китайский, танцы, лепка и каллиграфия на Грибалёвой. Расписание, педагоги и запись на пробное занятие на одной странице.",
+      cta="Записаться на пробное",
+      feats=[("Все направления", "Подготовка к школе, языки, Монтессори, ментальная арифметика, балет"), ("Расписание по возрастам", "Родитель сразу видит группу для своего ребёнка"), ("Пробное занятие", "Заявка за минуту, без звонков в рабочее время")],
+      services=[("Подготовка к школе", "от 800 ₽ / занятие"), ("Английский / китайский", "от 900 ₽ / занятие"), ("Детские танцы и балет", "от 700 ₽ / занятие"), ("Ментальная арифметика", "от 900 ₽ / занятие"), ("Лепка и каллиграфия", "от 700 ₽ / занятие"), ("Группа продлённого дня", "по запросу")]),
+ dict(slug="samir", name="Самир", kind="Мастерская", art="shoe",
+      addr="Петровский бульвар, 11 к1", rating="5,0", reviews=24, link="https://2gis.ru/spb/firm/70000001075155251",
+      hours="ежедневно 11:00-20:00",
+      fonts="Oswald:wght@500;700&family=Inter:wght@400;500;700", hfont="Oswald", bfont="Inter", upper=True,
+      c=dict(bg="#f4efe7", card="#fffdf9", text="#2a211b", muted="#7c6f63", acc="#b5542a", acc2="#3d6b5a", acc3="#b5542a", line="#e6dccd", leaf="#000"),
+      title="Починим обувь, сумку, часы и сделаем ключ", sub="Мастерская на Петровском бульваре: ремонт обуви и кожгалантереи, чемоданов и часов, ключи и заточка. Цены на сайте, фото поломки в WhatsApp, и сразу ясно, сколько будет стоить.",
+      cta="Узнать цену ремонта",
+      feats=[("Цены на виду", "Набойки, молнии, батарейки, ключи: клиент знает цену до визита"), ("Фото поломки в WhatsApp", "Сфотографировал, отправил, получил ответ"), ("Всё в одном месте", "Обувь, сумки, чемоданы, часы, ключи и заточка")],
+      services=[("Замена набоек", "от 500 ₽"), ("Замена молнии", "от 900 ₽"), ("Ремонт чемодана", "от 800 ₽"), ("Батарейка в часы", "от 300 ₽"), ("Изготовление ключа", "от 250 ₽"), ("Заточка ножей", "от 300 ₽")]),
+ dict(slug="laoshi", name="Клуб Лаоши", kind="Языковая школа", art="hanzi", h1=54,
+      addr="Петровский бульвар, 7", rating="5,0", reviews=19, link="https://2gis.ru/spb/firm/70000001095278210",
+      hours="пн-сб 14:00-21:00",
+      fonts="Noto+Serif+SC:wght@700&family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700", hfont="Unbounded", bfont="Manrope", upper=False,
+      c=dict(bg="#fff8f2", card="#ffffff", text="#2a1714", muted="#7a6560", acc="#d7342a", acc2="#f2b33d", acc3="#d7342a", line="#f1e0d6", leaf="#000"),
+      title="Китайский, английский и подготовка к экзаменам", sub="Клуб Лаоши на Петровском бульваре: языки для детей и взрослых, ОГЭ, ЕГЭ и ВПР, занятия в классе и онлайн. Программы, цены и запись на пробный урок.",
+      cta="Записаться на пробный урок",
+      feats=[("Китайский с нуля", "Понятная программа по уровням и HSK"), ("ОГЭ, ЕГЭ, ВПР", "Подготовка по русскому и английскому с понятным планом"), ("Онлайн и в классе", "Родитель выбирает удобный формат сам")],
+      services=[("Китайский язык", "от 1 000 ₽ / урок"), ("Английский язык", "от 900 ₽ / урок"), ("Русский язык", "от 900 ₽ / урок"), ("Подготовка к ОГЭ / ЕГЭ", "от 1 200 ₽ / урок"), ("Онлайн-урок", "от 900 ₽"), ("Пробный урок", "бесплатно")]),
 ]
 
 def page(s):
     e = html.escape
     c = s["c"]
     up = "text-transform:uppercase;letter-spacing:.02em;" if s["upper"] else ""
-    light = c["bg"].lower() in ("#faf6f2", "#f7f2ea", "#fff6ee")
+    light = sum(int(c["bg"][i:i+2], 16) for i in (1, 3, 5)) > 450  # светлый фон -> белый текст на кнопках
     feats = "".join(f'<div class="f"><span>{i+1:02d}</span><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(s["feats"]))
     svc = "".join(f'<div class="row"><b>{e(n)}</b><i></i><span>{e(p)}</span></div>' for n, p in s["services"])
     return f'''<!doctype html>
@@ -144,7 +225,7 @@ nav{{display:flex;gap:26px;color:var(--muted);font-size:15px}}nav a:hover{{color
 .btn.ghost{{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}}
 .hero .wrap{{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:90px}}
 .kind{{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}}
-.hero h1{{font-size:clamp(40px,6.4vw,78px)}}
+.hero h1{{font-size:clamp(36px,6.4vw,{s.get("h1", 78)}px)}}
 .hero p{{color:var(--muted);font-size:19px;max-width:520px;margin:22px 0 32px}}
 .btns{{display:flex;gap:12px;flex-wrap:wrap}}
 .rate{{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:10px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}}
@@ -183,7 +264,7 @@ footer{{padding:36px 0;color:var(--muted);font-size:14px}}footer .wrap{{display:
 <section class="price" id="price"><div class="wrap"><div class="sh"><h2>Цены</h2></div><div class="rows">{svc}</div>
 <p class="note">Цены здесь для примера. На настоящем сайте будут ваши услуги и ваш прайс.</p></div></section>
 <section class="find" id="find"><div class="wrap">
-<div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> {e(s["addr"])}</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> из вашей карточки</p>
+<div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> {e(s["addr"])}</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> {e(s.get("hours", "из вашей карточки"))}</p>
 <a href="{s["link"]}" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в 2ГИС</a></div>
 <div class="card big"><div class="n">{s["rating"]}</div><p>средняя оценка по {s["reviews"]} отзывам в 2ГИС</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
 </div></section>
