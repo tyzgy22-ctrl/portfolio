@@ -4,131 +4,453 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Александр | Сайты и монтаж видео</title>
-<meta name="description" content="Делаю сайты-визитки, лендинги и монтирую видео для Reels, Shorts, TikTok и YouTube.">
+<meta name="description" content="Делаю сайты для бизнеса и монтирую ролики для Reels, Shorts, TikTok и YouTube. 3D, анимация и внимание к деталям.">
+<meta property="og:title" content="Александр | Сайты и монтаж видео">
+<meta property="og:description" content="Сайты для бизнеса и монтаж роликов. Посмотрите работы.">
+<meta property="og:image" content="video/hero-bg.jpg">
+<link rel="preload" as="image" href="video/hero/001.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0f14;--card:#151922;--line:#232a36;--text:#eef1f6;--muted:#8d97a8;--acc:#7cf0b4;--acc2:#6aa8ff}
+:root{--bg:#0d0f14;--card:#141821;--line:#232a36;--text:#eef1f6;--muted:#8d97a8;--acc:#7cf0b4;--acc2:#6aa8ff}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:17px/1.6 Manrope,system-ui,sans-serif}
+body{background:var(--bg);color:var(--text);font:17px/1.6 Manrope,system-ui,sans-serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:Unbounded,sans-serif;line-height:1.15}
-.btn{display:inline-block;background:var(--acc);color:#0b1a12;font-weight:700;padding:14px 26px;border-radius:12px;transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(124,240,180,.25)}
-.btn.out{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
-.logo{font-family:Unbounded;font-weight:700}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Unbounded,sans-serif;line-height:1.12;font-weight:700}
+.grad{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#0b1a12;font-weight:700;padding:15px 28px;border-radius:14px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(124,240,180,.3)}
+.btn.out{background:rgba(255,255,255,.04);color:var(--text);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.btn.out:hover{box-shadow:inset 0 0 0 1px var(--acc)}
+
+/* Прогресс и шапка */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:60}
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.solid{background:rgba(13,15,20,.75);backdrop-filter:blur(14px);border-color:var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:Unbounded;font-weight:700;font-size:18px}
 .logo span{color:var(--acc)}
-nav{display:flex;gap:26px;color:var(--muted);font-size:15px}
+nav{display:flex;gap:28px;color:var(--muted);font-size:15px}
 nav a:hover{color:var(--text)}
-.hero{padding:70px 0 90px;background:radial-gradient(600px 300px at 80% 0,rgba(106,168,255,.15),transparent),radial-gradient(500px 300px at 10% 80%,rgba(124,240,180,.1),transparent)}
-.hello{display:inline-flex;align-items:center;gap:8px;color:var(--acc);font-weight:700;font-size:14px;border:1px solid var(--line);padding:6px 14px;border-radius:30px;margin-bottom:24px}
-.hello i{width:8px;height:8px;border-radius:50%;background:var(--acc)}
-.hero h1{font-size:clamp(34px,6vw,66px);max-width:880px}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:560px;margin:22px 0 32px;font-size:19px}
+header .btn{padding:10px 18px;font-size:14px;border-radius:12px}
+
+/* Первый экран: 3D-ролик по прокрутке */
+#intro{height:360vh;position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#film{position:absolute;inset:0;width:100%;height:100%}
+.hint{position:absolute;left:0;right:0;bottom:6vh;text-align:center;color:var(--muted);font-size:14px;letter-spacing:.08em}
+.hint i{display:block;width:22px;height:36px;border:2px solid rgba(255,255,255,.3);border-radius:12px;margin:0 auto 10px;position:relative}
+.hint i::after{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--acc);animation:wheel 1.6s infinite}
+@keyframes wheel{to{transform:translateY(12px);opacity:0}}
+.top-tag{position:absolute;top:110px;left:0;right:0;text-align:center;font-family:Unbounded;font-size:clamp(22px,4vw,44px);opacity:.95;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.top-tag small{display:block;font-family:Manrope;font-size:14px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;margin-top:10px}
+.hero{position:absolute;inset:0;display:flex;align-items:center;opacity:0;pointer-events:none}
+.hero.on{pointer-events:auto}
+.hero .wrap{width:100%}
+.hello{display:inline-flex;align-items:center;gap:8px;color:var(--acc);font-weight:700;font-size:14px;border:1px solid rgba(124,240,180,.3);background:rgba(124,240,180,.06);padding:6px 14px;border-radius:30px;margin-bottom:min(24px,2.6vh)}
+.hello i{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc);animation:blink 1.8s infinite}
+@keyframes blink{50%{opacity:.35}}
+.hero{padding-top:60px}
+.hero h1{font-size:clamp(28px,min(6.2vw,8.2vh),74px);max-width:960px}
+.hero p{color:#b7c0cf;max-width:560px;margin:min(22px,2.4vh) 0 min(32px,3.6vh);font-size:clamp(15px,2.2vh,19px)}
 .hero .btns{display:flex;gap:12px;flex-wrap:wrap}
-section{padding:80px 0}
-.sh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:36px}
-.sh h2{font-size:clamp(28px,4vw,42px)}
+.stats{display:flex;gap:44px;margin-top:min(46px,5vh);flex-wrap:wrap}
+@media(max-height:640px){.stats{display:none}}
+.stats b{display:block;font-family:Unbounded;font-size:24px}
+.stats span{color:var(--muted);font-size:14px}
+
+/* Бегущая строка */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:20px 0;background:#0f1218}
+.track{display:flex;gap:46px;width:max-content;animation:run 30s linear infinite;font-family:Unbounded;font-size:22px;color:#3a4458;white-space:nowrap}
+.track b{color:var(--text);font-weight:500}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* Манифест: слова загораются */
+#manifest{height:200vh;position:relative}
+#manifest .pin{position:sticky;top:0;height:100vh;display:flex;align-items:center}
+.words{font-family:Unbounded;font-weight:500;font-size:clamp(24px,3.8vw,48px);line-height:1.3;max-width:1000px}
+.words span{color:#2a3140;transition:color .35s,text-shadow .35s}
+.words span.lit{color:var(--text)}
+.words span.lit.hl{color:var(--acc);text-shadow:0 0 24px rgba(124,240,180,.55)}
+.note{margin-top:30px;color:var(--muted);font-size:15px;max-width:520px}
+
+section{padding:110px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.sh h2{font-size:clamp(30px,4.4vw,52px)}
 .sh p{color:var(--muted);max-width:420px}
-.sites{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.site{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s;display:block}
-.site:hover{transform:translateY(-5px);border-color:#34405a}
-.prev{height:230px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;background:#000}
-.prev iframe{width:1280px;height:920px;border:0;transform:scale(.27);transform-origin:0 0;pointer-events:none}
-.bar{position:absolute;inset:0 0 auto;height:22px;background:rgba(21,25,34,.9);display:flex;gap:5px;align-items:center;padding:0 10px;z-index:2}
-.bar i{width:7px;height:7px;border-radius:50%;background:#3a4252}
-.si{padding:22px}
-.si h3{font-size:18px;margin-bottom:6px}
-.si p{color:var(--muted);font-size:15px}
-.si span{display:inline-block;margin-top:14px;color:var(--acc);font-weight:700;font-size:15px}
-.video .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}
-.phone{border-radius:32px;border:8px solid #232a36;overflow:hidden;max-width:340px;width:100%;justify-self:center;background:#000;aspect-ratio:9/16}
+.kicker{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+
+/* Площадка с карточками */
+#play{position:relative;height:620px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:radial-gradient(circle at 1px 1px,#222a38 1px,transparent 0) 0 0/28px 28px,#0f1218;touch-action:pan-y}
+.pc{position:absolute;left:0;top:0;width:270px;background:rgba(20,24,33,.85);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:10px;cursor:grab;user-select:none;touch-action:none;box-shadow:0 20px 50px rgba(0,0,0,.45);will-change:transform}
+.pc:active{cursor:grabbing}
+.pc .bar{display:flex;gap:5px;padding:2px 4px 9px}
+.pc .bar i{width:8px;height:8px;border-radius:50%;background:#3a4252}
+.pc .bar i:first-child{background:#ff6b6b}.pc .bar i:nth-child(2){background:#ffd166}.pc .bar i:nth-child(3){background:var(--acc)}
+.pc img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:10px;pointer-events:none;background:#000}
+.pc h3{font-size:15px;margin:12px 6px 2px}
+.pc p{font-size:13px;color:var(--muted);margin:0 6px 4px}
+.pc .tagv{position:absolute;top:44px;right:20px;background:var(--acc);color:#0b1a12;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px}
+.playhint{position:absolute;left:0;right:0;bottom:16px;text-align:center;color:#4b5568;font-size:14px;pointer-events:none}
+
+/* Видео */
+.video .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.phone{border-radius:36px;border:9px solid #1d232e;overflow:hidden;max-width:330px;width:100%;justify-self:center;background:#000;aspect-ratio:9/16;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px #2a3240,0 0 80px rgba(106,168,255,.15)}
 .phone video{width:100%;height:100%;display:block;object-fit:cover}
-.video h2{font-size:clamp(28px,4vw,42px);margin-bottom:16px}
-.video p{color:var(--muted);margin-bottom:22px}
-.list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px}
-.list div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:15px}
+.video h2{font-size:clamp(30px,4.4vw,52px);margin-bottom:16px}
+.video p{color:var(--muted);margin-bottom:26px}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}
+.list div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 16px;font-size:15px}
 .list b{color:var(--acc);margin-right:6px}
-.how{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{border:1px solid var(--line);border-radius:18px;padding:26px}
-.step b{font-family:Unbounded;color:var(--acc2);font-size:26px}
-.step h3{font-size:16px;margin:12px 0 6px}
-.step p{color:var(--muted);font-size:15px}
-.contact{background:linear-gradient(135deg,#13261d,#121a2b);border:1px solid var(--line);border-radius:28px;padding:54px;text-align:center}
-.contact h2{font-size:clamp(28px,4vw,44px)}
-.contact p{color:var(--muted);margin:14px auto 28px;max-width:520px}
-.contact .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center}
+
+/* Что делаю */
+.svc{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:90px 1fr auto;gap:30px;align-items:center;padding:34px;border:1px solid var(--line);border-radius:24px;background:var(--card);position:relative;overflow:hidden;transition:border-color .3s}
+.row::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at var(--mx,50%) var(--my,50%),rgba(124,240,180,.12),transparent 70%);opacity:0;transition:opacity .3s}
+.row:hover{border-color:#34405a}
+.row:hover::before{opacity:1}
+.row .num{font-family:Unbounded;font-size:40px;color:#2c3546}
+.row h3{font-size:clamp(20px,2.4vw,28px);margin-bottom:6px}
+.row p{color:var(--muted);font-size:15px;max-width:560px}
+.row .price{font-family:Unbounded;font-size:22px;white-space:nowrap;text-align:right}
+.row .price small{display:block;font-family:Manrope;font-size:13px;color:var(--muted)}
+
+/* Контакт */
+.contact{position:relative;border-radius:32px;padding:70px 50px;overflow:hidden;background:url(video/hero-bg.jpg) center/cover;border:1px solid var(--line)}
+.contact .in{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative}
+.contact h2{font-size:clamp(32px,4.6vw,56px)}
+.contact p{color:#b7c0cf;margin-top:16px}
+form{display:grid;gap:12px;background:rgba(13,15,20,.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:28px}
+input,textarea,select{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;color:var(--text);padding:14px 16px;font:inherit}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acc)}
+select option{background:var(--bg)}
+form .btn{justify-content:center}
+.sent{display:none;color:var(--acc);font-size:14px;text-align:center}
+footer{padding:40px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* Окно просмотра */
+#modal{position:fixed;inset:0;z-index:80;background:rgba(5,6,9,.8);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+#modal.on{display:flex}
+.mbox{width:min(1100px,100%);background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;animation:pop .35s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes pop{from{transform:scale(.92);opacity:0}}
+.mtop{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.mtop h3{font-size:16px}
+.mtop .acts{display:flex;gap:8px}
+.mtop .btn{padding:9px 16px;font-size:14px;border-radius:10px}
+.mbody iframe{display:block;width:100%;height:72vh;border:0;background:#fff}
+.mbody video{display:block;max-height:78vh;margin:0 auto;background:#000}
+
+/* Курсор */
+.cur,.ring{position:fixed;left:0;top:0;pointer-events:none;z-index:90;border-radius:50%;display:none}
+.cur{width:6px;height:6px;background:var(--acc);margin:-3px 0 0 -3px}
+.ring{width:38px;height:38px;border:1.5px solid rgba(124,240,180,.55);margin:-19px 0 0 -19px;transition:width .25s,height .25s,margin .25s,background .25s}
+.ring.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(124,240,180,.08)}
+@media(pointer:fine){.cur,.ring{display:block}body,a,button,.pc{cursor:none}}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+
 @media(max-width:860px){
  nav{display:none}
- .sites,.how{grid-template-columns:1fr}
- .video .wrap{grid-template-columns:1fr}
+ .top-tag{top:96px}
+ .stats{gap:26px;margin-top:34px}
+ .stats b{font-size:20px}
+ .hero p{font-size:17px}
+ #play{height:560px}
+ .pc{width:165px;padding:7px;border-radius:14px}
+ .pc h3{font-size:13px;margin:8px 4px 0}
+ .pc p{display:none}
+ .pc .tagv{top:30px;right:12px;font-size:11px}
+ .stats{gap:22px}
+ .video .wrap,.contact .in{grid-template-columns:1fr}
  .list{grid-template-columns:1fr}
- .contact{padding:36px 22px}
- section{padding:60px 0}
- .prev iframe{transform:scale(.3)}
+ .row{grid-template-columns:1fr;gap:10px;padding:26px}
+ .row .num{font-size:28px}
+ .row .price{text-align:left}
+ .contact{padding:40px 22px}
+ section{padding:80px 0}
+ .mbody iframe{height:70vh}
 }
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
+<div id="progress"></div>
+<div class="cur"></div><div class="ring"></div>
+
+<header id="hdr"><div class="wrap">
   <a href="#" class="logo">Александр<span>.</span></a>
-  <nav><a href="#sites">Сайты</a><a href="#video">Монтаж</a><a href="#how">Как работаю</a><a href="#contact">Связаться</a></nav>
+  <nav><a href="#work">Работы</a><a href="#video">Монтаж</a><a href="#services">Цены</a><a href="#contact">Контакты</a></nav>
+  <a href="#contact" class="btn">Написать</a>
 </div></header>
 
-<section class="hero"><div class="wrap">
-  <div class="hello"><i></i>Беру новые заказы</div>
-  <h1>Делаю <em>сайты</em> и монтирую <em>видео</em>, которые работают на вас</h1>
-  <p>Привет, я Александр. Делаю сайты-визитки и лендинги для мастеров и малого бизнеса, а ещё монтирую ролики для Reels, Shorts, TikTok и YouTube. Быстро, аккуратно и без лишних сложностей.</p>
-  <div class="btns"><a href="#contact" class="btn">Обсудить задачу</a><a href="#sites" class="btn out">Смотреть работы</a></div>
-</div></section>
+<div id="intro">
+  <div class="stage">
+    <canvas id="film"></canvas>
+    <div class="top-tag" id="tag">Сайты · Монтаж · 3D<small>Листайте, чтобы открыть</small></div>
+    <div class="hint" id="hint"><i></i>Прокрутите вниз</div>
+    <div class="hero" id="hero"><div class="wrap">
+      <div class="hello"><i></i>Беру новые заказы</div>
+      <h1>Делаю <span class="grad">сайты</span> и <span class="grad">видео</span>, от которых не хочется уходить</h1>
+      <p>Привет, я Александр. Учусь на разработчика игр и переношу в сайты и ролики то, что умею в играх: 3D, анимацию и внимание к каждой детали.</p>
+      <div class="btns"><a href="#contact" class="btn">Обсудить проект →</a><a href="#work" class="btn out">Смотреть работы</a></div>
+      <div class="stats"><div><b>3-5 дней</b><span>сайт под ключ</span></div><div><b>от 1 дня</b><span>монтаж ролика</span></div><div><b>2 правки</b><span>бесплатно</span></div></div>
+    </div></div>
+  </div>
+</div>
 
-<section id="sites"><div class="wrap">
-  <div class="sh"><h2>Сайты</h2><p>Каждый сайт удобно открывается с телефона. Нажмите на карточку, чтобы посмотреть вживую.</p></div>
-  <div class="sites">
-    <a class="site" href="barbershop/"><div class="prev"><div class="bar"><i></i><i></i><i></i></div><iframe src="barbershop/" loading="lazy" tabindex="-1" title="Барбершоп"></iframe></div><div class="si"><h3>Барбершоп «Бритва»</h3><p>Тёмный стильный сайт с ценами, мастерами и онлайн-записью.</p><span>Открыть →</span></div></a>
-    <a class="site" href="coffee/"><div class="prev"><div class="bar"><i></i><i></i><i></i></div><iframe src="coffee/" loading="lazy" tabindex="-1" title="Кофейня"></iframe></div><div class="si"><h3>Кофейня «Зерно»</h3><p>Тёплый сайт кофейни с меню по вкладкам и картой.</p><span>Открыть →</span></div></a>
-    <a class="site" href="nails/"><div class="prev"><div class="bar"><i></i><i></i><i></i></div><iframe src="nails/" loading="lazy" tabindex="-1" title="Маникюр"></iframe></div><div class="si"><h3>Мастер маникюра</h3><p>Нежный сайт-визитка с прайсом, работами и записью в Telegram.</p><span>Открыть →</span></div></a>
+<div class="marquee"><div class="track">
+  <span><b>Сайты-визитки</b></span><span>✦</span><span>Лендинги</span><span>✦</span><span><b>Монтаж Reels</b></span><span>✦</span><span>Shorts и TikTok</span><span>✦</span><span><b>3D и анимация</b></span><span>✦</span><span>Субтитры</span><span>✦</span>
+  <span><b>Сайты-визитки</b></span><span>✦</span><span>Лендинги</span><span>✦</span><span><b>Монтаж Reels</b></span><span>✦</span><span>Shorts и TikTok</span><span>✦</span><span><b>3D и анимация</b></span><span>✦</span><span>Субтитры</span><span>✦</span>
+</div></div>
+
+<div id="manifest"><div class="pin"><div class="wrap">
+  <div class="kicker">Подход</div>
+  <div class="words" id="words">Обычный сайт просто существует. Хороший *держит внимание*, как хорошая игра: каждый экран тянет дальше, а в конце хочется *нажать на кнопку.* Такие я и делаю.</div>
+  <div class="note">Кстати, ноутбук в начале страницы я сам смоделировал и отрендерил в Blender. Могу сделать такое и для вашего сайта.</div>
+</div></div></div>
+
+<section id="work"><div class="wrap">
+  <div class="sh rv"><div><div class="kicker">Работы</div><h2>Портфолио</h2></div><p>Карточки можно хватать и бросать. Нажмите на любую, чтобы посмотреть работу.</p></div>
+  <div id="play" class="rv">
+    <div class="pc" data-type="site" data-url="barbershop/" data-title="Барбершоп «Бритва»"><div class="bar"><i></i><i></i><i></i></div><img src="video/thumb-barbershop.webp" alt="Сайт барбершопа"><h3>Барбершоп «Бритва»</h3><p>Цены, мастера, онлайн-запись</p></div>
+    <div class="pc" data-type="site" data-url="coffee/" data-title="Кофейня «Зерно»"><div class="bar"><i></i><i></i><i></i></div><img src="video/thumb-coffee.webp" alt="Сайт кофейни"><h3>Кофейня «Зерно»</h3><p>Меню по вкладкам и карта</p></div>
+    <div class="pc" data-type="site" data-url="nails/" data-title="Мастер маникюра"><div class="bar"><i></i><i></i><i></i></div><img src="video/thumb-nails.webp" alt="Сайт мастера маникюра"><h3>Мастер маникюра</h3><p>Прайс, работы, запись в Telegram</p></div>
+    <div class="pc" data-type="video" data-url="video/showreel.mp4" data-title="Шоурил: монтаж"><div class="bar"><i></i><i></i><i></i></div><img src="video/thumb-showreel.webp" alt="Шоурил монтажа"><span class="tagv">▶ видео</span><h3>Шоурил монтажа</h3><p>Анимация, плашки, звук</p></div>
+    <div class="playhint">← хватайте и бросайте →</div>
   </div>
 </div></section>
 
 <section class="video" id="video"><div class="wrap">
-  <div class="phone"><video src="video/showreel.mp4" poster="video/showreel-poster.jpg" controls playsinline preload="none"></video></div>
-  <div>
-    <h2>Монтаж видео</h2>
-    <p>Слева нарезка из моего анимационного сериала: сценарий, озвучка, анимация, плашки и монтаж сделаны мной. Для ваших роликов делаю динамичный монтаж, который удерживает зрителя.</p>
+  <div class="phone rv"><video id="reel" src="video/showreel.mp4" poster="video/showreel-poster.jpg" muted loop playsinline preload="none"></video></div>
+  <div class="rv">
+    <div class="kicker">Монтаж</div>
+    <h2>Ролики, которые досматривают</h2>
+    <p>Это нарезка из моего анимационного сериала: сценарий, озвучка, анимация и монтаж сделаны мной. Для ваших роликов делаю динамичный монтаж, который не даёт пролистнуть.</p>
     <div class="list">
-      <div><b>✓</b>Вертикальные ролики 9:16</div>
-      <div><b>✓</b>Субтитры по словам</div>
-      <div><b>✓</b>Вырезаю паузы и оговорки</div>
-      <div><b>✓</b>Музыка, звуки, переходы</div>
-      <div><b>✓</b>Цветокоррекция</div>
-      <div><b>✓</b>Чистка звука от шума</div>
+      <div><b>✓</b>Вертикальные 9:16</div><div><b>✓</b>Субтитры по словам</div>
+      <div><b>✓</b>Вырезаю паузы и оговорки</div><div><b>✓</b>Музыка, звуки, переходы</div>
+      <div><b>✓</b>Цветокоррекция</div><div><b>✓</b>Чистка звука от шума</div>
     </div>
-    <a href="#contact" class="btn">Заказать монтаж</a>
+    <a href="#contact" class="btn">Заказать монтаж →</a>
   </div>
 </div></section>
 
-<section id="how"><div class="wrap">
-  <div class="sh"><h2>Как я работаю</h2><p>Всё просто и прозрачно, без предоплаты за «посмотреть».</p></div>
-  <div class="how">
-    <div class="step"><b>01</b><h3>Обсуждаем</h3><p>Вы пишете, что нужно, я задаю пару вопросов и называю цену и срок.</p></div>
-    <div class="step"><b>02</b><h3>Делаю</h3><p>Присылаю промежуточный результат, чтобы вы видели, как идёт работа.</p></div>
-    <div class="step"><b>03</b><h3>Правки</h3><p>Вношу правки, пока результат вам не понравится (в разумных пределах).</p></div>
-    <div class="step"><b>04</b><h3>Сдаю</h3><p>Отдаю готовый сайт или видео и помогаю разместить.</p></div>
+<section id="services"><div class="wrap">
+  <div class="sh rv"><div><div class="kicker">Цены</div><h2>Что я делаю</h2></div><p>Точную цену называю после короткого разговора. Без предоплаты «за посмотреть».</p></div>
+  <div class="svc">
+    <div class="row rv"><div class="num">01</div><div><h3>Сайт-визитка или лендинг</h3><p>Современный сайт под телефон и компьютер: тексты, кнопки WhatsApp и Telegram, форма заявки, карта. Размещу бесплатно, платите только за домен.</p></div><div class="price">от 5 000 ₽<small>3-5 дней</small></div></div>
+    <div class="row rv"><div class="num">02</div><div><h3>Монтаж видео</h3><p>Reels, Shorts, TikTok и YouTube. Субтитры, музыка, звук, цвет. Нарезки из длинных видео и стримов.</p></div><div class="price">от 500 ₽<small>1-2 дня</small></div></div>
+    <div class="row rv"><div class="num">03</div><div><h3>3D и анимация</h3><p>3D-сцены в Blender для сайтов и роликов: продукт, логотип, эффектные заставки, как ноутбук в начале этой страницы.</p></div><div class="price">договорная<small>от 2 дней</small></div></div>
   </div>
 </div></section>
 
-<section id="contact"><div class="wrap"><div class="contact">
-  <h2>Есть задача? Напишите</h2>
-  <p>Отвечаю быстро, обычно в течение часа. Расскажите, что нужно сделать, и я назову цену.</p>
-  <div class="btns"><a class="btn" href="https://t.me/USERNAME">Написать в Telegram</a><a class="btn out" href="https://www.avito.ru/">Мой профиль на Авито</a></div>
-</div></div></section>
+<section id="contact"><div class="wrap"><div class="contact rv"><div class="in">
+  <div>
+    <div class="kicker">Контакты</div>
+    <h2>Есть задача? Давайте обсудим</h2>
+    <p>Отвечаю быстро, обычно в течение часа. Расскажите, что нужно, и я назову цену и срок.</p>
+  </div>
+  <form id="form">
+    <input name="name" required placeholder="Как вас зовут">
+    <select name="what"><option>Нужен сайт</option><option>Нужен монтаж видео</option><option>Нужно 3D или анимация</option><option>Другое</option></select>
+    <textarea name="msg" placeholder="Пара слов о задаче"></textarea>
+    <button class="btn">Написать в Telegram →</button>
+    <div class="sent" id="sent">Текст скопирован, вставьте его в чат.</div>
+  </form>
+</div></div></div></section>
 
-<footer>© 2026 Александр. Сайты и монтаж видео.</footer>
+<footer><div class="wrap"><span>© 2026 Александр. Сайты, монтаж, 3D.</span><a href="#" id="tglink">Telegram</a></div></footer>
+
+<div id="modal"><div class="mbox"><div class="mtop"><h3 id="mtitle"></h3><div class="acts"><a class="btn" id="mopen" target="_blank">Открыть сайт ↗</a><button class="btn out" id="mclose">✕</button></div></div><div class="mbody" id="mbody"></div></div></div>
+
+<script>
+const TG = "USERNAME"; // ник в Telegram без @
+document.getElementById('tglink').href = 'https://t.me/' + TG;
+
+/* ---------- 3D-ролик по прокрутке ---------- */
+const N = 150, frames = new Array(N), cv = document.getElementById('film'), ctx = cv.getContext('2d');
+const intro = document.getElementById('intro'), hero = document.getElementById('hero'),
+      hint = document.getElementById('hint'), tag = document.getElementById('tag');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let cur = -1;
+const src = i => 'video/hero/' + String(i + 1).padStart(3, '0') + '.webp';
+function load(i){ if(frames[i]) return; const im = new Image(); im.decoding='async'; im.src = src(i); im.onload = () => { if(Math.abs(i - want) < 3) draw(true); }; frames[i] = im; }
+// сначала каждый 10-й кадр, потом остальные
+for(let i = 0; i < N; i += 10) load(i); load(N - 1);
+setTimeout(() => { for(let i = 0; i < N; i++) load(i); }, 300);
+function size(){ const d = Math.min(devicePixelRatio || 1, 2); cv.width = innerWidth * d; cv.height = innerHeight * d; draw(true); }
+let want = 0;
+function nearest(i){ for(let k = 0; k < N; k++){ for(const j of [i - k, i + k]){ const f = frames[j]; if(f && f.complete && f.naturalWidth) return f; } } return null; }
+function draw(force){
+  if(!force && want === cur) return;
+  const im = nearest(want); if(!im) return;
+  cur = want;
+  const iw = im.naturalWidth, ih = im.naturalHeight;
+  const cover = Math.max(cv.width / iw, cv.height / ih), fit = Math.min(cover, cv.width / iw * 1.25);
+  // на узком экране сначала показываем ноутбук целиком, к концу заполняем экран
+  const q = want / (N - 1), k = q < .55 ? 0 : ease(clamp((q - .55) / .45));
+  const s = fit + (cover - fit) * k, w = iw * s, h = ih * s, x = (cv.width - w) / 2, y = (cv.height - h) / 2;
+  ctx.fillStyle = '#0d0f14'; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.drawImage(im, x, y, w, h);
+  if(y > 0){
+    const f = Math.min(h * .25, 220 * (devicePixelRatio || 1));
+    let g = ctx.createLinearGradient(0, y, 0, y + f); g.addColorStop(0, '#0d0f14'); g.addColorStop(1, 'rgba(13,15,20,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, y - 1, cv.width, f + 1);
+    g = ctx.createLinearGradient(0, y + h, 0, y + h - f); g.addColorStop(0, '#0d0f14'); g.addColorStop(1, 'rgba(13,15,20,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, y + h - f, cv.width, f + 1);
+  }
+}
+const clamp = v => Math.max(0, Math.min(1, v));
+const ease = t => t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2;
+
+/* ---------- Манифест ---------- */
+const wordsEl = document.getElementById('words');
+let hl = false;
+wordsEl.innerHTML = wordsEl.textContent.trim().split(/\s+/).map(w => {
+  if(w.startsWith('*')){ hl = true; w = w.slice(1); }
+  let end = false; if(w.includes('*')){ end = true; w = w.replace('*', ''); }
+  const h = `<span${hl ? ' class="hl"' : ''}>${w}</span>`; if(end) hl = false; return h;
+}).join(' ');
+const words = [...wordsEl.children], man = document.getElementById('manifest');
+
+/* ---------- Прокрутка ---------- */
+const hdr = document.getElementById('hdr'), bar = document.getElementById('progress');
+function onScroll(){
+  const y = scrollY, H = innerHeight;
+  bar.style.width = (y / (document.documentElement.scrollHeight - H) * 100) + '%';
+  hdr.classList.toggle('solid', y > intro.offsetHeight - H - 10);
+  const p = reduce ? 1 : clamp(y / (intro.offsetHeight - H));
+  want = Math.round(ease(clamp(p / .74)) * (N - 1)); draw();
+  const t = clamp((p - .66) / .2);
+  hero.style.opacity = t; hero.style.transform = `translateY(${(1 - t) * 40}px)`;
+  hero.classList.toggle('on', t > .5);
+  const o = 1 - clamp(p / .12); hint.style.opacity = o; tag.style.opacity = o;
+  const r = man.getBoundingClientRect(), mp = clamp((-r.top + H * .2) / (man.offsetHeight - H * .6));
+  const lit = Math.round(mp * words.length);
+  words.forEach((w, i) => w.classList.toggle('lit', i < lit));
+}
+addEventListener('scroll', () => requestAnimationFrame(onScroll), {passive:true});
+addEventListener('resize', () => { size(); onScroll(); });
+size(); onScroll();
+
+/* ---------- Появление блоков, видео в телефоне ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.15});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+const reel = document.getElementById('reel');
+new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? reel.play().catch(()=>{}) : reel.pause()), {threshold:.4}).observe(reel);
+reel.addEventListener('click', () => { reel.muted = !reel.muted; });
+
+/* ---------- Подсветка карточек услуг ---------- */
+document.querySelectorAll('.row').forEach(r => r.addEventListener('pointermove', e => {
+  const b = r.getBoundingClientRect(); r.style.setProperty('--mx', (e.clientX - b.left) + 'px'); r.style.setProperty('--my', (e.clientY - b.top) + 'px');
+}));
+
+/* ---------- Карточки с физикой ---------- */
+const play = document.getElementById('play');
+const cards = [...play.querySelectorAll('.pc')].map((el, i) => ({el, x:0, y:0, vx:0, vy:0, r:(i % 2 ? 4 : -5) + i, vr:0, drag:false}));
+let z = 10;
+function layout(){
+  const W = play.clientWidth, H = play.clientHeight;
+  cards.forEach((c, i) => {
+    const w = c.el.offsetWidth, h = c.el.offsetHeight;
+    const cols = W > 700 ? 4 : 2, col = i % cols, row = Math.floor(i / cols);
+    c.x = (W / cols) * col + (W / cols - w) / 2 + (row ? 20 : -10);
+    c.y = cols === 4 ? (i % 2 ? H * .42 : H * .08) : 30 + row * (h + 40) + (col ? 30 : 0);
+    c.x = Math.max(0, Math.min(W - w, c.x)); c.y = Math.max(0, Math.min(H - h, c.y));
+  });
+}
+layout(); addEventListener('resize', layout);
+cards.forEach(c => {
+  let sx, sy, ox, oy, lx, ly, lt, moved;
+  c.el.addEventListener('pointerdown', e => {
+    c.drag = true; moved = 0; c.el.setPointerCapture(e.pointerId); c.el.style.zIndex = ++z;
+    const b = play.getBoundingClientRect(); ox = e.clientX - b.left - c.x; oy = e.clientY - b.top - c.y;
+    sx = lx = e.clientX; sy = ly = e.clientY; lt = performance.now(); c.vx = c.vy = 0;
+  });
+  c.el.addEventListener('pointermove', e => {
+    if(!c.drag) return;
+    const b = play.getBoundingClientRect(), now = performance.now(), dt = Math.max(8, now - lt);
+    c.x = e.clientX - b.left - ox; c.y = e.clientY - b.top - oy;
+    c.vx = (e.clientX - lx) / dt * 16; c.vy = (e.clientY - ly) / dt * 16;
+    c.r += (Math.max(-15, Math.min(15, c.vx * .6)) - c.r) * .15;
+    lx = e.clientX; ly = e.clientY; lt = now;
+    moved = Math.max(moved, Math.hypot(e.clientX - sx, e.clientY - sy));
+  });
+  const up = () => {
+    if(!c.drag) return; c.drag = false;
+    if(moved < 6){ c.vx = c.vy = 0; openCard(c.el); return; }
+    const sp = Math.hypot(c.vx, c.vy), k = sp > 45 ? 45 / sp : 1; c.vx *= k; c.vy *= k; c.vr = c.vx * .12;
+  };
+  c.el.addEventListener('pointerup', up); c.el.addEventListener('pointercancel', up);
+});
+function tick(){
+  const W = play.clientWidth, H = play.clientHeight;
+  cards.forEach(c => {
+    const w = c.el.offsetWidth, h = c.el.offsetHeight;
+    if(!c.drag){
+      c.x += c.vx; c.y += c.vy; c.vx *= .955; c.vy *= .955; c.r += c.vr; c.vr *= .9; c.r = Math.max(-18, Math.min(18, c.r));
+    }
+    if(c.x < 0){ c.x = 0; c.vx = Math.abs(c.vx) * .65; c.vr = -c.vr; }
+    if(c.x > W - w){ c.x = W - w; c.vx = -Math.abs(c.vx) * .65; c.vr = -c.vr; }
+    if(c.y < 0){ c.y = 0; c.vy = Math.abs(c.vy) * .65; }
+    if(c.y > H - h){ c.y = H - h; c.vy = -Math.abs(c.vy) * .65; }
+  });
+  // карточки слегка расталкивают друг друга
+  for(let i = 0; i < cards.length; i++) for(let j = i + 1; j < cards.length; j++){
+    const a = cards[i], b = cards[j], aw = a.el.offsetWidth, ah = a.el.offsetHeight, bw = b.el.offsetWidth, bh = b.el.offsetHeight;
+    const dx = (a.x + aw / 2) - (b.x + bw / 2), dy = (a.y + ah / 2) - (b.y + bh / 2);
+    const px = (aw + bw) / 2 * .8 - Math.abs(dx), py = (ah + bh) / 2 * .8 - Math.abs(dy);
+    if(px > 0 && py > 0){
+      const f = .06, sx = Math.sign(dx) || 1, sy = Math.sign(dy) || 1;
+      if(px < py){ if(!a.drag) a.vx += sx * px * f; if(!b.drag) b.vx -= sx * px * f; }
+      else { if(!a.drag) a.vy += sy * py * f; if(!b.drag) b.vy -= sy * py * f; }
+    }
+  }
+  cards.forEach(c => c.el.style.transform = `translate(${c.x}px,${c.y}px) rotate(${c.r}deg)`);
+  requestAnimationFrame(tick);
+}
+tick();
+
+/* ---------- Окно просмотра ---------- */
+const modal = document.getElementById('modal'), mbody = document.getElementById('mbody'), mopen = document.getElementById('mopen');
+function openCard(el){
+  document.getElementById('mtitle').textContent = el.dataset.title;
+  if(el.dataset.type === 'video'){
+    mbody.innerHTML = `<video src="${el.dataset.url}" controls autoplay playsinline style="width:min(100%,46vh)"></video>`; mopen.style.display = 'none';
+  } else {
+    mbody.innerHTML = `<iframe src="${el.dataset.url}" title="${el.dataset.title}"></iframe>`; mopen.href = el.dataset.url; mopen.style.display = '';
+  }
+  modal.classList.add('on'); document.body.style.overflow = 'hidden';
+}
+function closeModal(){ modal.classList.remove('on'); mbody.innerHTML = ''; document.body.style.overflow = ''; }
+document.getElementById('mclose').onclick = closeModal;
+modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
+addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+/* ---------- Форма: текст в буфер и в Telegram ---------- */
+document.getElementById('form').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const text = `Здравствуйте! Меня зовут ${f.get('name')}. ${f.get('what')}. ${f.get('msg') || ''}`.trim();
+  navigator.clipboard?.writeText(text).catch(()=>{});
+  document.getElementById('sent').style.display = 'block';
+  open('https://t.me/' + TG, '_blank');
+});
+
+/* ---------- Курсор ---------- */
+if(matchMedia('(pointer:fine)').matches){
+  const dot = document.querySelector('.cur'), ring = document.querySelector('.ring');
+  let mx = -100, my = -100, rx = -100, ry = -100;
+  addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; dot.style.transform = `translate(${mx}px,${my}px)`; });
+  (function loop(){ rx += (mx - rx) * .18; ry += (my - ry) * .18; ring.style.transform = `translate(${rx}px,${ry}px)`; requestAnimationFrame(loop); })();
+  document.addEventListener('pointerover', e => ring.classList.toggle('big', !!e.target.closest('a,button,.pc,video,input,select,textarea')));
+}
+</script>
 </body>
 </html>
