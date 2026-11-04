@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Винил &amp; кофе · демо-набросок сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#16110e;--card:#211a15;--text:#f4ebdd;--muted:#b3a28c;--acc:#e2553b;--acc2:#f0a35e;--acc3:#e2553b;--line:#33291f;--leaf:#000}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:17px/1.6 "Manrope",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.1;}
+.demo{background:var(--acc);color:#111;font-size:13px;font-weight:700;text-align:center;padding:9px 16px}
+.demo a{text-decoration:underline}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:"Playfair Display";font-size:24px;font-weight:700;}.logo small{display:block;font-family:"Manrope";font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em;font-weight:500}
+nav{display:flex;gap:26px;color:var(--muted);font-size:15px}nav a:hover{color:var(--acc)}
+.btn{display:inline-block;background:var(--acc);color:#111;font-weight:700;padding:15px 28px;border-radius:999px;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px color-mix(in srgb,var(--acc) 40%,transparent)}
+.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:90px}
+.kind{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(40px,6.4vw,78px)}
+.hero p{color:var(--muted);font-size:19px;max-width:520px;margin:22px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.rate{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:10px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.rate b{font-size:26px;font-family:"Playfair Display"}.rate span{color:var(--muted);font-size:14px;line-height:1.3}.stars{color:#f5b301;letter-spacing:2px}
+.art{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 30px 60px rgba(0,0,0,.25))}
+.spin{animation:spin 14s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+section{padding:90px 0}.sh{margin-bottom:40px}.sh h2{font-size:clamp(32px,4.6vw,52px)}.sh p{color:var(--muted);margin-top:10px;max-width:560px}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:.25s}.f:hover{border-color:var(--acc);transform:translateY(-4px)}
+.f span{font-family:"Playfair Display";font-size:34px;color:var(--acc)}.f h3{font-size:21px;margin:12px 0 6px}.f p{color:var(--muted);font-size:15px}
+.price{background:var(--card);border-block:1px solid var(--line)}
+.rows{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.row{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.row b{font-weight:500}
+.row i{flex:1;border-bottom:1px dotted var(--muted);opacity:.5;transform:translateY(-5px)}.row span{font-weight:700;color:var(--acc);white-space:nowrap}
+.note{color:var(--muted);font-size:14px;margin-top:22px}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px}
+.card h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px}.card p{color:var(--muted);margin-bottom:10px}.card p b{color:var(--text)}
+.big{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111;border:0}
+.big .n{font-family:"Playfair Display";font-size:84px;line-height:1}.big p{color:inherit;opacity:.85}.big a{margin-top:20px;font-weight:700;text-decoration:underline}
+footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:var(--acc);font-weight:700}
+@media(max-width:860px){nav{display:none}.hero .wrap,.find .wrap{grid-template-columns:1fr}.art{max-width:280px;order:-1}.feats,.rows{grid-template-columns:1fr}section{padding:64px 0}.card{padding:28px}}
+</style></head><body>
+<div class="demo">Демо-набросок сайта для «Винил &amp; кофе». Это не официальный сайт: пример того, как он может выглядеть. Автор: <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
+<header><div class="wrap"><a href="#" class="logo">Винил &amp; кофе<small>Кофейня</small></a>
+<nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#find">Контакты</a></nav>
+<a href="#find" class="btn" style="padding:10px 20px;font-size:14px">Как нас найти</a></div></header>
+<section class="hero" style="padding:0"><div class="wrap"><div>
+<div class="kind">Кофейня · Санкт-Петербург</div>
+<h1>Кофе, вафли и пластинки во дворе у Невского</h1><p>Спрятанная кофейня с плющом на входе: внизу варим кофе и печём вафли, наверху мансарда с проигрывателем и винилом.</p>
+<div class="btns"><a href="#find" class="btn">Как нас найти</a><a href="#price" class="btn ghost">Смотреть цены</a></div>
+<div class="rate"><b>5,0</b><span><span class="stars">★★★★★</span><br>284 отзывов в 2ГИС</span></div>
+</div><svg viewBox="0 0 300 300" class="art spin"><circle cx="150" cy="150" r="140" fill="#111"/>
+  <g fill="none" stroke="#2a2a2a" stroke-width="1.5"><circle cx="150" cy="150" r="125"/><circle cx="150" cy="150" r="112"/><circle cx="150" cy="150" r="99"/><circle cx="150" cy="150" r="86"/><circle cx="150" cy="150" r="73"/></g>
+  <path d="M60 80 A110 110 0 0 1 150 40" stroke="rgba(255,255,255,.18)" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="150" cy="150" r="52" fill="var(--acc)"/><circle cx="150" cy="150" r="6" fill="#111"/>
+  <text x="150" y="137" text-anchor="middle" font-size="11" fill="var(--bg)" font-family="Manrope" font-weight="700" letter-spacing="2">ВИНИЛ</text>
+  <text x="150" y="172" text-anchor="middle" font-size="11" fill="var(--bg)" font-family="Manrope" font-weight="700" letter-spacing="2">&amp; КОФЕ</text></svg></div></section>
+<section id="about"><div class="wrap"><div class="sh"><h2>Что будет на сайте</h2><p>Всё, чтобы новый клиент нашёл вас в поиске, понял цены и сразу записался.</p></div>
+<div class="feats"><div class="f"><span>01</span><h3>Меню онлайн</h3><p>Кофе, вафли, сезонные напитки и сидр с ценами</p></div><div class="f"><span>02</span><h3>Как найти вход</h3><p>Карта и фото входа во двор, чтобы гости не блуждали</p></div><div class="f"><span>03</span><h3>Пластинка дня</h3><p>Что сегодня играет на втором этаже</p></div></div></div></section>
+<section class="price" id="price"><div class="wrap"><div class="sh"><h2>Цены</h2></div><div class="rows"><div class="row"><b>Капучино</b><i></i><span>250 ₽</span></div><div class="row"><b>Авторский кофе</b><i></i><span>от 320 ₽</span></div><div class="row"><b>Вафли сладкие</b><i></i><span>от 290 ₽</span></div><div class="row"><b>Вафли сытные</b><i></i><span>от 390 ₽</span></div><div class="row"><b>Сезонный напиток</b><i></i><span>от 330 ₽</span></div><div class="row"><b>Сидр</b><i></i><span>от 350 ₽</span></div></div>
+<p class="note">Цены здесь для примера. На настоящем сайте будут ваши услуги и ваш прайс.</p></div></section>
+<section class="find" id="find"><div class="wrap">
+<div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> улица Малая Садовая, 4 (во дворе)</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> из вашей карточки</p>
+<a href="https://2gis.ru/spb/firm/70000001064803008" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в 2ГИС</a></div>
+<div class="card big"><div class="n">5,0</div><p>средняя оценка по 284 отзывам в 2ГИС</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
+</div></section>
+<footer><div class="wrap"><span>Демо-набросок для «Винил &amp; кофе». Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты за 3-5 дней</span></div></footer>
+</body></html>
