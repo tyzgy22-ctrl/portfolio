@@ -30,6 +30,22 @@ ART = {
   <g fill="var(--leaf)" opacity=".85"><ellipse cx="125" cy="190" rx="26" ry="10" transform="rotate(-35 125 190)"/><ellipse cx="178" cy="200" rx="26" ry="10" transform="rotate(30 178 200)"/><ellipse cx="135" cy="150" rx="20" ry="8" transform="rotate(-50 135 150)"/></g>
   <g fill="var(--acc)"><circle cx="105" cy="92" r="11"/><circle cx="122" cy="84" r="11"/><circle cx="112" cy="74" r="10"/><circle cx="96" cy="78" r="9"/><circle cx="150" cy="112" r="12"/><circle cx="138" cy="100" r="10"/><circle cx="162" cy="98" r="11"/><circle cx="150" cy="88" r="10"/><circle cx="200" cy="100" r="11"/><circle cx="214" cy="90" r="10"/><circle cx="192" cy="86" r="9"/><circle cx="206" cy="76" r="9"/></g>
   <g fill="#fff" opacity=".5"><circle cx="102" cy="88" r="3"/><circle cx="146" cy="108" r="3"/><circle cx="197" cy="96" r="3"/></g></svg>''',
+ "bakery": '''<svg viewBox="0 0 300 300" class="art"><circle cx="150" cy="150" r="130" fill="var(--acc2)" opacity=".22"/>
+  <g stroke="#b8642b" stroke-width="3" stroke-linejoin="round">
+  <path d="M42 190C40 165 52 150 70 150C82 165 82 185 72 205C58 210 46 204 42 190Z" fill="#e9a35a"/>
+  <path d="M228 150C246 150 260 165 258 190C254 204 242 210 228 205C218 185 218 165 228 150Z" fill="#e9a35a"/>
+  <path d="M68 140C84 120 108 116 120 122C124 150 120 180 108 205C90 210 74 200 66 185C62 168 62 152 68 140Z" fill="#f2b467"/>
+  <path d="M232 140C238 152 238 168 234 185C226 200 210 210 192 205C180 180 176 150 180 122C192 116 216 120 232 140Z" fill="#f2b467"/>
+  <path d="M118 112C138 104 162 104 182 112C190 145 186 180 176 208C160 214 140 214 124 208C114 180 110 145 118 112Z" fill="#f7c47c"/></g>
+  <g stroke="#fff" stroke-width="3" opacity=".45" fill="none" stroke-linecap="round"><path d="M132 125c10-4 26-4 36 0"/><path d="M86 140c8-4 18-6 24-4"/></g>
+  <g fill="var(--acc)" opacity=".7"><circle cx="70" cy="80" r="5"/><circle cx="230" cy="70" r="4"/><circle cx="240" cy="240" r="6"/></g></svg>''',
+ "cauldron": '''<svg viewBox="0 0 300 300" class="art"><g fill="var(--acc2)" opacity=".8"><circle cx="120" cy="90" r="12"><animate attributeName="cy" values="110;60;110" dur="3s" repeatCount="indefinite"/></circle><circle cx="165" cy="70" r="9"><animate attributeName="cy" values="100;50;100" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="190" cy="100" r="7"><animate attributeName="cy" values="115;70;115" dur="2.8s" repeatCount="indefinite"/></circle></g>
+  <ellipse cx="150" cy="130" rx="105" ry="22" fill="var(--acc)"/><path d="M50 135c0 80 40 120 100 120s100-40 100-120z" fill="var(--text)"/>
+  <ellipse cx="150" cy="132" rx="92" ry="15" fill="var(--acc2)"/><path d="M95 250l-15 25M205 250l15 25" stroke="var(--text)" stroke-width="10" stroke-linecap="round"/></svg>''',
+ "phone": '''<svg viewBox="0 0 300 300" class="art"><circle cx="150" cy="150" r="130" fill="var(--acc)" opacity=".12"/>
+  <rect x="95" y="40" width="110" height="220" rx="22" fill="var(--text)"/><rect x="104" y="58" width="92" height="180" rx="10" fill="var(--bg)"/>
+  <path d="M110 80l40 50-25 20 50 60" stroke="var(--acc)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(205 205) rotate(40)"><rect x="-8" y="-60" width="16" height="70" rx="4" fill="var(--acc2)"/><rect x="-14" y="5" width="28" height="40" rx="8" fill="var(--acc)"/></g></svg>''',
 }
 
 SITES = [
@@ -73,13 +89,37 @@ SITES = [
       cta="Выбрать букет",
       feats=[("Витрина букетов", "Фото и цены, заказ одной кнопкой в WhatsApp"), ("Доставка по городу", "Зоны и стоимость доставки сразу видны"), ("Букет к дате", "Предзаказ к праздникам и напоминания")],
       services=[("Букет комплимент", "от 1 500 ₽"), ("Авторский букет", "от 3 500 ₽"), ("Композиция в коробке", "от 3 000 ₽"), ("Свадебный букет", "от 6 000 ₽"), ("Моно-букет роз", "от 4 000 ₽"), ("Доставка", "от 400 ₽")]),
+ dict(slug="hochu-tebya", name="Хочу тебя", kind="Кафе-пекарня", art="bakery",
+      addr="Краснофлотская улица, 6", rating="5,0", reviews=350, link="https://2gis.ru/spb/firm/70000001100819999",
+      fonts="Unbounded:wght@500;700&family=Manrope:wght@400;500;700", hfont="Unbounded", bfont="Manrope", upper=False,
+      c=dict(bg="#fff6ee", card="#ffffff", text="#2b1c16", muted="#86705f", acc="#e2623a", acc2="#f6b26b", acc3="#e2623a", line="#f1e1d2", leaf="#000"),
+      title="Свежая выпечка, которую хочется прямо сейчас", sub="Кафе-пекарня на Краснофлотской: выпечка каждое утро, кофе и завтраки. Меню с ценами и заказ с собой на одной странице.",
+      cta="Смотреть меню",
+      feats=[("Меню с фото", "Выпечка, завтраки и напитки с ценами"), ("Заказ с собой", "Кнопка WhatsApp, чтобы забрать без очереди"), ("Свежее сегодня", "Что только что из печи, обновляется за минуту")],
+      services=[("Круассан", "от 150 ₽"), ("Синнабон", "от 220 ₽"), ("Завтрак", "от 390 ₽"), ("Капучино", "от 220 ₽"), ("Пирог на заказ", "от 1 500 ₽"), ("Торт на заказ", "от 2 500 ₽")]),
+ dict(slug="burlyashchiy-kotyol", name="Бурлящий котёл", kind="Кофейня", art="cauldron",
+      addr="Гагаринская улица, 12 лит А", rating="4,9", reviews=317, link="https://2gis.ru/spb/firm/70000001052171579",
+      fonts="Cormorant+Garamond:ital,wght@0,700;1,700&family=Manrope:wght@400;500;700", hfont="Cormorant Garamond", bfont="Manrope", upper=False,
+      c=dict(bg="#14161a", card="#1d2026", text="#efe8dc", muted="#a39b8f", acc="#7fd18b", acc2="#b48cff", acc3="#7fd18b", line="#2c3038", leaf="#000"),
+      title="Кофе, сваренный как зелье", sub="Атмосферная кофейня на Гагаринской. Меню напитков, десерты и всё, чтобы гости находили вас не только в соцсетях, но и в поиске.",
+      cta="Смотреть меню",
+      feats=[("Меню напитков", "Авторские напитки с описанием и ценами"), ("Вас найдут в поиске", "Сайт виден в Яндексе и Google, а не только в VK"), ("Ссылки на соцсети", "YouTube, VK и Pinterest в одном месте")],
+      services=[("Эспрессо", "от 160 ₽"), ("Капучино", "от 240 ₽"), ("Авторский напиток", "от 320 ₽"), ("Чай в чайнике", "от 350 ₽"), ("Десерт", "от 250 ₽"), ("Зерно с собой", "от 700 ₽")]),
+ dict(slug="malifon", name="Малифон", kind="Ремонт телефонов", art="phone",
+      addr="проспект Испытателей, 37 лит А", rating="4,9", reviews=293, link="https://2gis.ru/spb/firm/70000001055376080",
+      fonts="Unbounded:wght@500;700&family=Inter:wght@400;500;700", hfont="Unbounded", bfont="Inter", upper=False,
+      c=dict(bg="#0e1420", card="#162033", text="#eaf1ff", muted="#93a3bf", acc="#3d8bff", acc2="#5fe0c1", acc3="#3d8bff", line="#24324a", leaf="#000"),
+      title="Ремонт телефонов без лишних вопросов", sub="Замена экрана, батареи и разъёма на Испытателей. Цены на ремонт сразу на сайте, заявка в WhatsApp за минуту.",
+      cta="Узнать цену ремонта",
+      feats=[("Цены на виду", "Клиент сразу видит стоимость своего ремонта"), ("Заявка в WhatsApp", "Модель и поломка одной кнопкой"), ("Гарантия", "Условия гарантии понятным текстом")],
+      services=[("Замена экрана", "от 2 500 ₽"), ("Замена батареи", "от 1 500 ₽"), ("Замена разъёма зарядки", "от 1 200 ₽"), ("Чистка после воды", "от 1 000 ₽"), ("Диагностика", "бесплатно"), ("Наклейка стекла", "от 500 ₽")]),
 ]
 
 def page(s):
     e = html.escape
     c = s["c"]
     up = "text-transform:uppercase;letter-spacing:.02em;" if s["upper"] else ""
-    light = c["bg"].lower() in ("#faf6f2", "#f7f2ea")
+    light = c["bg"].lower() in ("#faf6f2", "#f7f2ea", "#fff6ee")
     feats = "".join(f'<div class="f"><span>{i+1:02d}</span><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(s["feats"]))
     svc = "".join(f'<div class="row"><b>{e(n)}</b><i></i><span>{e(p)}</span></div>' for n, p in s["services"])
     return f'''<!doctype html>
