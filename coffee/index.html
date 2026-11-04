@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кофейня «Зерно» | Кофе и выпечка</title>
+<meta name="description" content="Кофейня с собственной обжаркой и выпечкой каждое утро.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6efe4;--paper:#fffaf2;--text:#2b1d14;--muted:#7a6656;--brown:#6b3f22;--accent:#d9773b;--line:#e4d6c3;--green:#5d7350}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:17px/1.6 Manrope,system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Lora,serif;line-height:1.15}
+.btn{display:inline-block;background:var(--brown);color:#fff;padding:14px 28px;border-radius:40px;font-weight:700;transition:.2s}
+.btn:hover{background:var(--accent);transform:translateY(-2px)}
+.btn.light{background:transparent;color:var(--brown);box-shadow:inset 0 0 0 2px var(--brown)}
+.btn.light:hover{background:var(--brown);color:#fff}
+header{padding:22px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Lora;font-size:26px;font-weight:700;color:var(--brown);display:flex;gap:10px;align-items:center}
+nav{display:flex;gap:30px;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--brown)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:80px}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--paper);border:1px solid var(--line);padding:7px 16px;border-radius:30px;font-size:14px;color:var(--green);font-weight:700;margin-bottom:22px}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.hero h1{font-size:clamp(42px,6.5vw,76px);color:var(--brown)}
+.hero h1 em{color:var(--accent)}
+.hero p{color:var(--muted);font-size:19px;margin:22px 0 32px;max-width:470px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap}
+.art{position:relative;aspect-ratio:1;max-width:440px;justify-self:center;width:100%}
+.art .circle{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f1c79b,#d9773b 70%)}
+.art svg{position:absolute;inset:8%;width:84%;height:84%}
+.badge{position:absolute;background:var(--paper);border-radius:16px;padding:12px 16px;box-shadow:0 10px 30px rgba(107,63,34,.15);font-size:14px;font-weight:700}
+.badge small{display:block;font-weight:400;color:var(--muted)}
+.b1{left:-6%;bottom:16%}.b2{right:-4%;top:10%}
+section{padding:90px 0}
+.center{text-align:center;max-width:620px;margin:0 auto 50px}
+.center h2{font-size:clamp(34px,5vw,50px);color:var(--brown)}
+.center p{color:var(--muted);margin-top:12px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.f{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:32px}
+.f .n{font-family:Lora;font-size:44px;color:var(--accent);line-height:1}
+.f h3{font-size:22px;margin:14px 0 8px}
+.f p{color:var(--muted);font-size:15px}
+.menu{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--bg);padding:10px 22px;border-radius:30px;font:inherit;font-weight:700;color:var(--muted);cursor:pointer}
+.tabs button.on{background:var(--brown);color:#fff;border-color:var(--brown)}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px 50px;max-width:860px;margin:0 auto}
+.mi{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.mi h3{font-size:19px}
+.mi small{display:block;color:var(--muted);font-size:14px}
+.mi b{color:var(--brown);white-space:nowrap}
+.hidden{display:none}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.card{background:var(--brown);color:#f6efe4;border-radius:28px;padding:44px}
+.card h2{font-size:clamp(30px,4vw,44px);margin-bottom:22px}
+.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(246,239,228,.15)}
+.row span{opacity:.7}
+.card .btn{background:var(--accent);margin-top:28px}
+.map{border-radius:28px;min-height:320px;background:
+ linear-gradient(90deg,transparent 48%,#fff 48% 52%,transparent 52%),
+ linear-gradient(0deg,transparent 30%,#fff 30% 34%,transparent 34%),
+ linear-gradient(35deg,transparent 60%,#fff 60% 63%,transparent 63%),#e8dcc8;position:relative;border:1px solid var(--line)}
+.pin{position:absolute;left:50%;top:66%;transform:translate(-50%,-100%);background:var(--accent);color:#fff;padding:10px 16px;border-radius:14px;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.pin::after{content:"";position:absolute;left:50%;bottom:-8px;margin-left:-8px;border:8px solid transparent;border-top-color:var(--accent);border-bottom:0}
+footer{padding:30px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--accent);font-weight:700}
+@media(max-width:860px){
+ nav{display:none}
+ .hero .wrap,.visit .wrap,.mgrid{grid-template-columns:1fr}
+ .feat{grid-template-columns:1fr}
+ .art{max-width:320px}
+ section{padding:64px 0}
+ .card{padding:30px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="#" class="logo">
+    <svg width="30" height="30" viewBox="0 0 32 32"><ellipse cx="16" cy="16" rx="10" ry="14" transform="rotate(30 16 16)" fill="#6b3f22"/><path d="M10 6c6 6 6 14 12 20" stroke="#f6efe4" stroke-width="2" fill="none" transform="rotate(30 16 16)"/></svg>
+    Зерно</a>
+  <nav><a href="#about">О нас</a><a href="#menu">Меню</a><a href="#visit">Как найти</a></nav>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="pill"><i></i>Открыто сейчас до 21:00</div>
+    <h1>Кофе, ради которого <em>стоит</em> проснуться</h1>
+    <p>Обжариваем зерно сами каждую неделю, печём круассаны с семи утра и всегда рады, если вы зайдёте просто поболтать.</p>
+    <div class="btns"><a href="#menu" class="btn">Смотреть меню</a><a href="#visit" class="btn light">Как добраться</a></div>
+  </div>
+  <div class="art">
+    <div class="circle"></div>
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <path d="M85 40c-6 10 6 16 0 26M100 34c-6 10 6 16 0 26M115 40c-6 10 6 16 0 26" stroke="#fffaf2" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>
+      <ellipse cx="100" cy="160" rx="72" ry="14" fill="#6b3f22" opacity=".35"/>
+      <path d="M48 80h104l-10 66c-2 10-10 16-20 16H78c-10 0-18-6-20-16z" fill="#fffaf2"/>
+      <path d="M150 92c22 0 22 34-4 34" stroke="#fffaf2" stroke-width="9" fill="none"/>
+      <ellipse cx="100" cy="82" rx="52" ry="9" fill="#6b3f22"/>
+      <path d="M86 82c6-6 22-6 28 0-6 4-22 4-28 0z" fill="#f1c79b"/>
+    </svg>
+    <div class="badge b1">★ 4,9<small>320 отзывов</small></div>
+    <div class="badge b2">☕ Своя обжарка<small>каждую неделю</small></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="center"><h2>Почему к нам возвращаются</h2><p>Небольшая кофейня на углу, где бариста помнят, что вы пьёте.</p></div>
+  <div class="feat">
+    <div class="f"><div class="n">01</div><h3>Свежая обжарка</h3><p>Зерно из Эфиопии, Колумбии и Бразилии. Обжариваем небольшими партиями, поэтому вкус всегда яркий.</p></div>
+    <div class="f"><div class="n">02</div><h3>Своя выпечка</h3><p>Круассаны, синнабоны и пироги печём здесь же. Утром их разбирают быстрее, чем кофе.</p></div>
+    <div class="f"><div class="n">03</div><h3>Уютно работать</h3><p>Быстрый Wi-Fi, розетки у каждого столика и тихая музыка. Можно сидеть хоть весь день.</p></div>
+  </div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="center"><h2>Меню</h2><p>Любой напиток можно сделать на растительном молоке.</p></div>
+  <div class="tabs">
+    <button class="on" data-t="coffee">Кофе</button><button data-t="tea">Не кофе</button><button data-t="food">Выпечка</button>
+  </div>
+  <div class="mgrid" data-g="coffee">
+    <div class="mi"><div><h3>Эспрессо</h3><small>30 мл</small></div><b>150 ₽</b></div>
+    <div class="mi"><div><h3>Американо</h3><small>250 / 350 мл</small></div><b>190 / 230 ₽</b></div>
+    <div class="mi"><div><h3>Капучино</h3><small>250 / 350 мл</small></div><b>230 / 280 ₽</b></div>
+    <div class="mi"><div><h3>Флэт уайт</h3><small>Двойной эспрессо</small></div><b>260 ₽</b></div>
+    <div class="mi"><div><h3>Раф ванильный</h3><small>350 мл</small></div><b>300 ₽</b></div>
+    <div class="mi"><div><h3>Фильтр-кофе</h3><small>Сорт дня</small></div><b>210 ₽</b></div>
+  </div>
+  <div class="mgrid hidden" data-g="tea">
+    <div class="mi"><div><h3>Матча латте</h3><small>350 мл</small></div><b>320 ₽</b></div>
+    <div class="mi"><div><h3>Какао с маршмеллоу</h3><small>350 мл</small></div><b>270 ₽</b></div>
+    <div class="mi"><div><h3>Чай облепиховый</h3><small>Чайник 500 мл</small></div><b>290 ₽</b></div>
+    <div class="mi"><div><h3>Лимонад</h3><small>Манго-маракуйя</small></div><b>250 ₽</b></div>
+  </div>
+  <div class="mgrid hidden" data-g="food">
+    <div class="mi"><div><h3>Круассан</h3><small>Классический / миндальный</small></div><b>170 / 240 ₽</b></div>
+    <div class="mi"><div><h3>Синнабон</h3><small>С корицей</small></div><b>210 ₽</b></div>
+    <div class="mi"><div><h3>Чизкейк</h3><small>Нью-Йорк</small></div><b>290 ₽</b></div>
+    <div class="mi"><div><h3>Сэндвич</h3><small>Курица, песто, моцарелла</small></div><b>340 ₽</b></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="card">
+    <h2>Заходите в гости</h2>
+    <div class="row"><span>Адрес</span>ул. Примерная, 5</div>
+    <div class="row"><span>Будни</span>8:00-21:00</div>
+    <div class="row"><span>Выходные</span>9:00-22:00</div>
+    <div class="row"><span>Телефон</span>+7 (900) 000-00-00</div>
+    <a href="#" class="btn" onclick="event.preventDefault();alert('Это демо-сайт: здесь будет ссылка на Telegram кофейни')">Заказать с собой в Telegram</a>
+  </div>
+  <div class="map"><div class="pin">Зерно ☕</div></div>
+</div></section>
+
+<footer><div class="wrap"><span>© Кофейня «Зерно». Демо-проект.</span><span>Сайт сделан <a href="../">Александром</a></span></div></footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.mgrid').forEach(g=>g.classList.toggle('hidden',g.dataset.g!==b.dataset.t));
+});
+</script>
+</body>
+</html>
