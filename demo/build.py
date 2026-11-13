@@ -194,6 +194,33 @@ SITES = [
       cta="Записаться на пробный урок",
       feats=[("Китайский с нуля", "Понятная программа по уровням и HSK"), ("ОГЭ, ЕГЭ, ВПР", "Подготовка по русскому и английскому с понятным планом"), ("Онлайн и в классе", "Родитель выбирает удобный формат сам")],
       services=[("Китайский язык", "от 1 000 ₽ / урок"), ("Английский язык", "от 900 ₽ / урок"), ("Русский язык", "от 900 ₽ / урок"), ("Подготовка к ОГЭ / ЕГЭ", "от 1 200 ₽ / урок"), ("Онлайн-урок", "от 900 ₽"), ("Пробный урок", "бесплатно")]),
+ # --- 13.11.2026: ответили в WhatsApp, данные и цены из Яндекс Карт ---
+ dict(slug="bocharov", name="Бочаров Барбершоп", kind="Барбершоп", art="barber", h1=68,
+      addr="Будапештская улица, 56", rating="5,0", reviews=108, link="https://yandex.ru/maps/org/165478340490/",
+      src="Яндекс Картах", src_btn="Яндекс Картах", book="https://wa.me/79117015010", hours="ежедневно до 21:00",
+      pnote="Цены из вашей карточки на Яндекс Картах. На сайте будет полный прайс: бритьё, камуфляж, уход и комплексы.",
+      fonts="Oswald:wght@500;700&family=Inter:wght@400;500;700", hfont="Oswald", bfont="Inter", upper=True,
+      c=dict(bg="#0d0f0b", card="#161a13", text="#eef0e6", muted="#9aa08c", acc="#ff5a2b", acc2="#ffc23d", acc3="#ff5a2b", line="#262c20", leaf="#000"),
+      title="Стрижка, достойная охотника", sub="Барбершоп с Хищником на стене у проспекта Славы. Святослав, Ульяна и Марио подскажут форму, пострижут и объяснят укладку. Награда «Хорошее место 2026» от Яндекс Карт.",
+      cta="Записаться",
+      feats=[("Запись онлайн", "Мастер и время в пару касаний, без звонков"), ("Мастера и их работы", "Святослав, Ульяна, Марио: фото стрижек, чтобы выбрать своего"), ("Весь прайс на виду", "Стрижки, бритьё, борода, уход и комплексы с ценами")],
+      services=[("Стрижка всеми инструментами", "1 650 ₽"), ("Стрижка машинкой (fade)", "1 350 ₽"), ("Стрижка только ножницами", "2 100 ₽"), ("Стрижка + борода и усы", "2 800 ₽"), ("Моделирование бороды и усов", "1 350 ₽"), ("Влажное бритьё лица", "1 350 ₽")],
+      revs=[("Константин М.", "Очень интересный дизайн, который крутится вокруг «Хищника». Мастер Святослав не просто молча выполнил работу по референсу, а объяснил, что лучше подойдёт мне."),
+            ("Армен К.", "Отличное и очень антуражное место! Мастер Ульяна сделала прекрасную стрижку. Буду посещать этот барбершоп, несмотря на то, что живу в другом районе."),
+            ("Павел", "Над моими волосами и бородой поработала Ульяна, и мне всё понравилось. Ценник адекватный, отношение хорошее. Рекомендую.")]),
+ dict(slug="the-cult", name="The Cult", kind="Барбершоп и салон", art="barber", h1=70,
+      addr="проспект Медиков, 10 к1", rating="5,0", reviews=299, link="https://yandex.ru/maps/org/86873889701/",
+      src="Яндекс Картах", src_btn="Яндекс Картах", book="https://n1295388.yclients.ru/",
+      pnote="Цены из вашей карточки на Яндекс Картах. Для новых гостей -20% на первое посещение.",
+      fonts="Playfair+Display:ital,wght@0,600;1,600&family=Manrope:wght@400;500;700", hfont="Playfair Display", bfont="Manrope", upper=False,
+      c=dict(bg="#111013", card="#1b191e", text="#f3eee6", muted="#a69e93", acc="#c9a35b", acc2="#e6cd94", acc3="#c9a35b", line="#2c2830", leaf="#000"),
+      title="Культовое место для стрижки на Петроградской", sub="Мужские и женские стрижки, борода, маникюр и кофе у проспекта Медиков. Для новых гостей -20% на первое посещение. Запись онлайн в пару касаний.",
+      cta="Записаться онлайн",
+      feats=[("-20% на первый визит", "Акция для новых гостей на виду, а не в глубине карточки"), ("Мастера по уровням", "Барбер, старший и эксперт: клиент сразу видит разницу в цене"), ("Онлайн-запись", "Ваша запись YClients прямо на сайте")],
+      services=[("Мужская стрижка", "от 2 000 ₽"), ("Стрижка + борода", "от 3 000 ₽"), ("Моделирование бороды", "от 1 200 ₽"), ("Женская стрижка", "3 500 ₽"), ("Маникюр с гель-лаком", "2 800 ₽"), ("Маникюр + педикюр (акция)", "4 990 ₽")],
+      revs=[("Эльга", "Невероятно уютная и расслабляющая атмосфера, которая заставляет вернуться вновь. Отдельная благодарность мастеру Марине."),
+            ("Alina L.", "Была у мастера Марии, стрижка великолепная. Учла все мои пожелания и дала советы по укладке кудрей."),
+            ("Александра Ржевская", "Всегда предложат водичку, чай, кофе, уютная атмосфера и персонал вежливый. Рекомендую данное место.")]),
 ]
 
 def page(s):
@@ -202,6 +229,11 @@ def page(s):
     up = "text-transform:uppercase;letter-spacing:.02em;" if s["upper"] else ""
     light = sum(int(c["bg"][i:i+2], 16) for i in (1, 3, 5)) > 450  # светлый фон -> белый текст на кнопках
     feats = "".join(f'<div class="f"><span>{i+1:02d}</span><h3>{e(t)}</h3><p>{e(d)}</p></div>' for i, (t, d) in enumerate(s["feats"]))
+    src = s.get("src", "2ГИС"); src_btn = s.get("src_btn", src)
+    book = s.get("book", "#find"); tgt = ' target="_blank" rel="noopener"' if book.startswith("http") else ""
+    revs = ""
+    if s.get("revs"):
+        revs = '<section id="reviews"><div class="wrap"><div class="sh"><h2>Отзывы</h2><p>Настоящие отзывы из ' + e(src) + '</p></div><div class="feats">' + "".join(f'<div class="f"><p style="color:var(--text);font-size:16px">«{e(t)}»</p><h3 style="font-size:16px;margin-top:14px">{e(a)}</h3></div>' for a, t in s["revs"]) + '</div></div></section>'
     svc = "".join(f'<div class="row"><b>{e(n)}</b><i></i><span>{e(p)}</span></div>' for n, p in s["services"])
     return f'''<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -252,21 +284,21 @@ footer{{padding:36px 0;color:var(--muted);font-size:14px}}footer .wrap{{display:
 <div class="demo">Демо-набросок сайта для «{e(s["name"])}». Это не официальный сайт: пример того, как он может выглядеть. Автор: <a href="{PORTFOLIO}">Александр</a></div>
 <header><div class="wrap"><a href="#" class="logo">{e(s["name"])}<small>{e(s["kind"])}</small></a>
 <nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#find">Контакты</a></nav>
-<a href="#find" class="btn" style="padding:10px 20px;font-size:14px">{e(s["cta"])}</a></div></header>
+<a href="{book}" class="btn"{tgt} style="padding:10px 20px;font-size:14px">{e(s["cta"])}</a></div></header>
 <section class="hero" style="padding:0"><div class="wrap"><div>
 <div class="kind">{e(s["kind"])} · Санкт-Петербург</div>
 <h1>{e(s["title"])}</h1><p>{e(s["sub"])}</p>
-<div class="btns"><a href="#find" class="btn">{e(s["cta"])}</a><a href="#price" class="btn ghost">Смотреть цены</a></div>
-<div class="rate"><b>{s["rating"]}</b><span><span class="stars">★★★★★</span><br>{s["reviews"]} отзывов в 2ГИС</span></div>
+<div class="btns"><a href="{book}" class="btn"{tgt}>{e(s["cta"])}</a><a href="#price" class="btn ghost">Смотреть цены</a></div>
+<div class="rate"><b>{s["rating"]}</b><span><span class="stars">★★★★★</span><br>{s["reviews"]} отзывов в {src}</span></div>
 </div>{ART[s["art"]]}</div></section>
 <section id="about"><div class="wrap"><div class="sh"><h2>Что будет на сайте</h2><p>Всё, чтобы новый клиент нашёл вас в поиске, понял цены и сразу записался.</p></div>
 <div class="feats">{feats}</div></div></section>
 <section class="price" id="price"><div class="wrap"><div class="sh"><h2>Цены</h2></div><div class="rows">{svc}</div>
-<p class="note">Цены здесь для примера. На настоящем сайте будут ваши услуги и ваш прайс.</p></div></section>
+<p class="note">{e(s.get("pnote", "Цены здесь для примера. На настоящем сайте будут ваши услуги и ваш прайс."))}</p></div></section>{revs}
 <section class="find" id="find"><div class="wrap">
 <div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> {e(s["addr"])}</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> {e(s.get("hours", "из вашей карточки"))}</p>
-<a href="{s["link"]}" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в 2ГИС</a></div>
-<div class="card big"><div class="n">{s["rating"]}</div><p>средняя оценка по {s["reviews"]} отзывам в 2ГИС</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
+<a href="{s["link"]}" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в {src_btn}</a></div>
+<div class="card big"><div class="n">{s["rating"]}</div><p>средняя оценка по {s["reviews"]} отзывам в {src}</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
 </div></section>
 <footer><div class="wrap"><span>Демо-набросок для «{e(s["name"])}». Не является официальным сайтом.</span><span>Сделал <a href="{PORTFOLIO}">Александр</a> · сайты за 3-5 дней</span></div></footer>
 </body></html>'''
