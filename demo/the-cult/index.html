@@ -1,71 +1,167 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>The Cult · демо-набросок сайта</title>
+<title>The Cult · проспект Медиков, 10 · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#111013;--card:#1b191e;--text:#f3eee6;--muted:#a69e93;--acc:#c9a35b;--acc2:#e6cd94;--acc3:#c9a35b;--line:#2c2830;--leaf:#000}
+:root{--bg:#f3efe9;--paper:#faf8f4;--ink:#1b1a18;--muted:#77706a;--line:#ddd5ca;--acc:#9c5a2e}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:17px/1.6 "Manrope",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:"Playfair Display",serif;line-height:1.1;}
-.demo{background:var(--acc);color:#111;font-size:13px;font-weight:700;text-align:center;padding:9px 16px}
-.demo a{text-decoration:underline}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
-.logo{font-family:"Playfair Display";font-size:24px;font-weight:700;}.logo small{display:block;font-family:"Manrope";font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em;font-weight:500}
-nav{display:flex;gap:26px;color:var(--muted);font-size:15px}nav a:hover{color:var(--acc)}
-.btn{display:inline-block;background:var(--acc);color:#111;font-weight:700;padding:15px 28px;border-radius:999px;transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px color-mix(in srgb,var(--acc) 40%,transparent)}
-.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:90px}
-.kind{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
-.hero h1{font-size:clamp(36px,6.4vw,70px)}
-.hero p{color:var(--muted);font-size:19px;max-width:520px;margin:22px 0 32px}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.w{max-width:1280px;margin:0 auto;padding:0 28px}
+.serif{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:1.02;letter-spacing:-.01em}
+.cap{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.demo{background:var(--ink);color:#cfc8bf;font-size:12px;text-align:center;padding:7px 12px}.demo a{color:#fff;text-decoration:underline}
+.btn{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:17px 30px;background:var(--ink);color:var(--paper);transition:background .2s}
+.btn:hover{background:var(--acc)}.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}.btn.line:hover{background:var(--ink);color:var(--paper)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:92px}
+.logo{border:1.5px solid var(--ink);padding:7px 16px 5px;text-align:center;line-height:1}
+.logo b{font-weight:400;font-size:20px;letter-spacing:.22em}.logo small{display:block;font-size:8px;letter-spacing:.3em;margin-top:4px}
+nav{display:flex;gap:34px;font-size:14px}nav a:hover{color:var(--acc)}
+/* hero */
+.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding-top:30px;padding-bottom:100px}
+.hero h1{font-size:clamp(52px,7vw,104px);margin:22px 0 26px}.hero h1 em{color:var(--acc)}
+.hero p{font-size:18px;color:#4b4741;max-width:470px;margin-bottom:36px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.rate{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:10px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
-.rate b{font-size:26px;font-family:"Playfair Display"}.rate span{color:var(--muted);font-size:14px;line-height:1.3}.stars{color:#f5b301;letter-spacing:2px}
-.art{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 30px 60px rgba(0,0,0,.25))}
-.spin{animation:spin 14s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-section{padding:90px 0}.sh{margin-bottom:40px}.sh h2{font-size:clamp(32px,4.6vw,52px)}.sh p{color:var(--muted);margin-top:10px;max-width:560px}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.f{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:.25s}.f:hover{border-color:var(--acc);transform:translateY(-4px)}
-.f span{font-family:"Playfair Display";font-size:34px;color:var(--acc)}.f h3{font-size:21px;margin:12px 0 6px}.f p{color:var(--muted);font-size:15px}
-.price{background:var(--card);border-block:1px solid var(--line)}
-.rows{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
-.row{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.row b{font-weight:500}
-.row i{flex:1;border-bottom:1px dotted var(--muted);opacity:.5;transform:translateY(-5px)}.row span{font-weight:700;color:var(--acc);white-space:nowrap}
-.note{color:var(--muted);font-size:14px;margin-top:22px}
-.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px}
-.card h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px}.card p{color:var(--muted);margin-bottom:10px}.card p b{color:var(--text)}
-.big{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111;border:0}
-.big .n{font-family:"Playfair Display";font-size:84px;line-height:1}.big p{color:inherit;opacity:.85}.big a{margin-top:20px;font-weight:700;text-decoration:underline}
-footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:var(--acc);font-weight:700}
-@media(max-width:860px){nav{display:none}.hero .wrap,.find .wrap{grid-template-columns:1fr}.art{max-width:280px;order:-1}.feats,.rows{grid-template-columns:1fr}section{padding:64px 0}.card{padding:28px}}
+.meta{display:flex;gap:36px;margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.meta b{display:block;font-family:"Cormorant Garamond";font-size:42px;font-weight:500;line-height:1}.meta span{font-size:13px;color:var(--muted)}
+.ph{position:relative}.ph img:first-child{width:86%;margin-left:auto;aspect-ratio:3/4;object-fit:cover}
+.ph img+img{position:absolute;left:0;bottom:-50px;width:44%;aspect-ratio:3/4;object-fit:cover;border:10px solid var(--bg)}
+/* wide */
+.wide{position:relative;height:min(78vh,680px);min-height:420px;overflow:hidden}
+.wide img{width:100%;height:100%;object-fit:cover}
+.wide p{position:absolute;left:28px;bottom:28px;background:var(--paper);padding:18px 24px;max-width:420px;font-size:15px}
+section{padding:120px 0}
+h2{font-size:clamp(44px,5.6vw,80px)}
+/* offer */
+.offer{background:var(--ink);color:var(--paper)}
+.offer .w{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.offer .big{font-family:"Cormorant Garamond";font-size:clamp(110px,16vw,220px);line-height:.85;color:#d9a77c}
+.offer h2{margin:16px 0 18px}.offer p{color:#b9b1a7;max-width:420px}
+.offer .it{border-color:#3a3631}.offer .it span{color:#d9a77c}
+.it{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}.it span{font-weight:600;white-space:nowrap}
+/* services */
+.svc .top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:60px;flex-wrap:wrap}.svc .top p{max-width:380px;color:var(--muted)}
+.lv{width:100%;border-collapse:collapse;margin-bottom:70px}
+.lv th{font-weight:500;text-align:right;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:0 0 14px}.lv th:first-child{text-align:left}
+.lv td{padding:20px 0;border-top:1px solid var(--line);text-align:right;font-weight:600;white-space:nowrap}
+.lv td:first-child{text-align:left;font-family:"Cormorant Garamond";font-size:28px;font-weight:500;white-space:normal}
+.lv td.na{color:#bdb5aa;font-weight:400}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.cols h3{font-family:"Cormorant Garamond";font-weight:500;font-size:36px;margin-bottom:8px}
+/* strip */
+.strip{display:flex;gap:10px;overflow-x:auto;padding:0 28px 10px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.strip img{height:520px;width:auto;aspect-ratio:3/4;object-fit:cover;scroll-snap-align:start;flex:none}
+.strip img.l{aspect-ratio:4/3}
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.rv div{background:var(--paper);padding:38px}.rv q{display:block;font-family:"Cormorant Garamond";font-size:25px;line-height:1.3;quotes:"«" "»"}
+.rv span{display:block;margin-top:22px;font-size:13px;color:var(--muted)}
+/* contacts */
+.ct .w{display:grid;grid-template-columns:1fr 1.3fr;gap:60px}
+.row{padding:20px 0;border-bottom:1px solid var(--line)}.row .cap{display:block;margin-bottom:4px}.row b{font-size:20px;font-weight:500}
+.map iframe{width:100%;height:100%;min-height:540px;border:0;filter:grayscale(.85) sepia(.15)}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:var(--muted)}footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:var(--ink);text-decoration:underline}
+.fab{display:none}
+@media(max-width:900px){
+ nav{display:none}header .w{height:76px}
+ .hero .w,.offer .w,.cols,.ct .w{grid-template-columns:1fr}.hero .w{gap:70px;padding-bottom:110px}
+ .meta{gap:22px}.meta b{font-size:34px}
+ section{padding:80px 0}.rv{grid-template-columns:1fr}
+ .strip img{height:360px}.lv td:first-child{font-size:22px}.lv th,.lv td{font-size:13px}
+ .wide{height:56vh}.wide p{right:16px;left:16px;bottom:16px}
+ .fab{display:block;text-align:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:9}
+ footer{padding-bottom:90px}
+}
 </style></head><body>
-<div class="demo">Демо-набросок сайта для «The Cult». Это не официальный сайт: пример того, как он может выглядеть. Автор: <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
-<header><div class="wrap"><a href="#" class="logo">The Cult<small>Барбершоп и салон</small></a>
-<nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#find">Контакты</a></nav>
-<a href="https://n1295388.yclients.ru/" class="btn" target="_blank" rel="noopener" style="padding:10px 20px;font-size:14px">Записаться онлайн</a></div></header>
-<section class="hero" style="padding:0"><div class="wrap"><div>
-<div class="kind">Барбершоп и салон · Санкт-Петербург</div>
-<h1>Культовое место для стрижки на Петроградской</h1><p>Мужские и женские стрижки, борода, маникюр и кофе у проспекта Медиков. Для новых гостей -20% на первое посещение. Запись онлайн в пару касаний.</p>
-<div class="btns"><a href="https://n1295388.yclients.ru/" class="btn" target="_blank" rel="noopener">Записаться онлайн</a><a href="#price" class="btn ghost">Смотреть цены</a></div>
-<div class="rate"><b>5,0</b><span><span class="stars">★★★★★</span><br>299 отзывов в Яндекс Картах</span></div>
-</div><svg viewBox="0 0 300 300" class="art"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs>
-  <circle cx="150" cy="150" r="130" fill="none" stroke="var(--line)" stroke-width="2"/>
-  <g transform="rotate(-35 150 150)"><rect x="135" y="40" width="30" height="150" rx="6" fill="url(#g1)"/><rect x="128" y="185" width="44" height="70" rx="10" fill="var(--text)"/>
-  <rect x="139" y="50" width="22" height="130" rx="4" fill="none" stroke="var(--bg)" stroke-width="2" opacity=".35"/></g>
-  <g transform="rotate(35 150 150)" opacity=".9"><rect x="141" y="30" width="18" height="170" rx="9" fill="var(--text)"/><g fill="var(--bg)"><rect x="141" y="60" width="18" height="3"/><rect x="141" y="72" width="18" height="3"/><rect x="141" y="84" width="18" height="3"/><rect x="141" y="96" width="18" height="3"/><rect x="141" y="108" width="18" height="3"/><rect x="141" y="120" width="18" height="3"/></g></g></svg></div></section>
-<section id="about"><div class="wrap"><div class="sh"><h2>Что будет на сайте</h2><p>Всё, чтобы новый клиент нашёл вас в поиске, понял цены и сразу записался.</p></div>
-<div class="feats"><div class="f"><span>01</span><h3>-20% на первый визит</h3><p>Акция для новых гостей на виду, а не в глубине карточки</p></div><div class="f"><span>02</span><h3>Мастера по уровням</h3><p>Барбер, старший и эксперт: клиент сразу видит разницу в цене</p></div><div class="f"><span>03</span><h3>Онлайн-запись</h3><p>Ваша запись YClients прямо на сайте</p></div></div></div></section>
-<section class="price" id="price"><div class="wrap"><div class="sh"><h2>Цены</h2></div><div class="rows"><div class="row"><b>Мужская стрижка</b><i></i><span>от 2 000 ₽</span></div><div class="row"><b>Стрижка + борода</b><i></i><span>от 3 000 ₽</span></div><div class="row"><b>Моделирование бороды</b><i></i><span>от 1 200 ₽</span></div><div class="row"><b>Женская стрижка</b><i></i><span>3 500 ₽</span></div><div class="row"><b>Маникюр с гель-лаком</b><i></i><span>2 800 ₽</span></div><div class="row"><b>Маникюр + педикюр (акция)</b><i></i><span>4 990 ₽</span></div></div>
-<p class="note">Цены из вашей карточки на Яндекс Картах. Для новых гостей -20% на первое посещение.</p></div></section><section id="reviews"><div class="wrap"><div class="sh"><h2>Отзывы</h2><p>Настоящие отзывы из Яндекс Картах</p></div><div class="feats"><div class="f"><p style="color:var(--text);font-size:16px">«Невероятно уютная и расслабляющая атмосфера, которая заставляет вернуться вновь. Отдельная благодарность мастеру Марине.»</p><h3 style="font-size:16px;margin-top:14px">Эльга</h3></div><div class="f"><p style="color:var(--text);font-size:16px">«Была у мастера Марии, стрижка великолепная. Учла все мои пожелания и дала советы по укладке кудрей.»</p><h3 style="font-size:16px;margin-top:14px">Alina L.</h3></div><div class="f"><p style="color:var(--text);font-size:16px">«Всегда предложат водичку, чай, кофе, уютная атмосфера и персонал вежливый. Рекомендую данное место.»</p><h3 style="font-size:16px;margin-top:14px">Александра Ржевская</h3></div></div></div></section>
-<section class="find" id="find"><div class="wrap">
-<div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> проспект Медиков, 10 к1</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> из вашей карточки</p>
-<a href="https://yandex.ru/maps/org/86873889701/" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в Яндекс Картах</a></div>
-<div class="card big"><div class="n">5,0</div><p>средняя оценка по 299 отзывам в Яндекс Картах</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
+<div class="demo">Демо-набросок сайта для The Cult. Фото, цены и отзывы взяты из вашей карточки на Яндекс Картах. Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
+
+<header><div class="w">
+ <a href="#" class="logo"><b>THE CULT</b><small>EST. 2024</small></a>
+ <nav><a href="#services">Услуги</a><a href="#offer">Первый визит</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+ <a class="btn line" href="https://n1295388.yclients.ru/" target="_blank" rel="noopener" style="padding:13px 22px">Записаться</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <div class="cap">Барбершоп и салон · Петроградская сторона</div>
+  <h1 class="serif">Стрижка, борода и маникюр <em>в одном месте</em></h1>
+  <p>Мужской и женский зал, ногтевой сервис и кофе для гостей на проспекте Медиков. Выбирайте мастера по уровню и записывайтесь онлайн в пару касаний.</p>
+  <div class="btns"><a class="btn" href="https://n1295388.yclients.ru/" target="_blank" rel="noopener">Записаться онлайн</a><a class="btn line" href="#services">Услуги и цены</a></div>
+  <div class="meta"><div><b>5,0</b><span>351 оценка на Яндекс Картах</span></div><div><b>299</b><span>отзывов гостей</span></div><div><b>−20%</b><span>на первое посещение</span></div></div>
+ </div>
+ <div class="ph"><img src="img/work.jpg" alt="Барбер моделирует бороду"><img src="img/g6.jpg" alt="Женская стрижка"></div>
 </div></section>
-<footer><div class="wrap"><span>Демо-набросок для «The Cult». Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты за 3-5 дней</span></div></footer>
+
+<div class="wide"><img src="img/hero.jpg" alt="Зал The Cult: кресла и зеркала" loading="lazy"><p>Лофт на проспекте Медиков, 10: бетон, дерево, живые растения и кожаные кресла. Гости пишут, что сюда хочется возвращаться.</p></div>
+
+<section class="offer" id="offer"><div class="w">
+ <div><div class="big">−20%</div><h2 class="serif">на первый визит</h2><p>Для новых гостей на стрижки, бороду, камуфляж и ногтевой сервис. Цены ниже уже со скидкой.</p>
+  <div class="btns" style="margin-top:30px"><a class="btn" href="https://n1295388.yclients.ru/" target="_blank" rel="noopener" style="background:#d9a77c;color:var(--ink)">Записаться со скидкой</a></div></div>
+ <div>
+  <div class="it"><b>Мужская стрижка</b><span>2 000 ₽</span></div>
+  <div class="it"><b>Стрижка машинкой, одна насадка</b><span>1 400 ₽</span></div>
+  <div class="it"><b>Моделирование бороды и усов</b><span>1 450 ₽</span></div>
+  <div class="it"><b>Камуфляж седины, 1 зона</b><span>800 ₽</span></div>
+  <div class="it"><b>Мужской маникюр</b><span>2 000 ₽</span></div>
+  <div class="it"><b>Маникюр с покрытием гель-лаком</b><span>2 250 ₽</span></div>
+ </div>
+</div></section>
+
+<section class="svc" id="services"><div class="w">
+ <div class="top"><div><div class="cap">Мужской зал</div><h2 class="serif">Мастер по вашему уровню</h2></div><p>Барбер, старший барбер или эксперт: цена зависит от опыта мастера, а не от сложности стрижки.</p></div>
+ <table class="lv">
+  <tr><th>Услуга</th><th>Барбер</th><th>Старший</th><th>Эксперт</th></tr>
+  <tr><td>Мужская стрижка</td><td>2 000 ₽</td><td>2 400 ₽</td><td>3 000 ₽</td></tr>
+  <tr><td>Стрижка + борода</td><td>3 000 ₽</td><td>3 500 ₽</td><td class="na">по записи</td></tr>
+  <tr><td>Моделирование бороды и усов</td><td>1 200 ₽</td><td>1 800 ₽</td><td class="na">по записи</td></tr>
+ </table>
+ <div class="cols">
+  <div><div class="cap">Женский зал</div><h3>Стрижки и окрашивание</h3>
+   <div class="it"><b>Женская стрижка</b><span>3 500 ₽</span></div>
+   <div class="it"><b>Укладка с мытьём головы</b><span>2 500 ₽</span></div>
+   <div class="it"><b>Интенсивное тонирование</b><span>8 000 ₽</span></div>
+   <div class="it"><b>Стойкое окрашивание</b><span>10 000 ₽</span></div>
+   <div class="it"><b>Биохимическая завивка</b><span>10 000 ₽</span></div>
+  </div>
+  <div><div class="cap">Ногтевой сервис</div><h3>Маникюр и педикюр</h3>
+   <div class="it"><b>Маникюр с покрытием гель-лаком</b><span>2 800 ₽</span></div>
+   <div class="it"><b>Педикюр с покрытием гель-лаком</b><span>3 700 ₽</span></div>
+   <div class="it"><b>Маникюр + педикюр с покрытием</b><span>4 990 ₽</span></div>
+   <div class="it"><b>Мужской педикюр</b><span>3 200 ₽</span></div>
+  </div>
+ </div>
+</div></section>
+
+<div class="strip">
+ <img src="img/g2.jpg" alt="Мужская стрижка" loading="lazy"><img class="l" src="img/g1.jpg" alt="Зал барбершопа" loading="lazy">
+ <img src="img/g3.jpg" alt="Бритьё в кресле" loading="lazy"><img src="img/g8.jpg" alt="Работа барбера" loading="lazy">
+ <img class="l" src="img/g10.jpg" alt="Зона ожидания с кофе" loading="lazy"><img src="img/g7.jpg" alt="Стрижка у окна" loading="lazy">
+ <img src="img/g9.jpg" alt="Зал с растениями" loading="lazy"><img src="img/g4.jpg" alt="Рабочее место" loading="lazy">
+ <img class="l" src="img/g5.jpg" alt="Зал и бар" loading="lazy"><img src="img/g11.jpg" alt="Косметика" loading="lazy">
+</div>
+
+<section id="reviews"><div class="w">
+ <div class="cap">Отзывы с Яндекс Карт</div><h2 class="serif">Что говорят гости</h2>
+ <div class="rv">
+  <div><q>Невероятно уютная и расслабляющая атмосфера, которая заставляет вернуться вновь. Отдельная благодарность мастеру Марине.</q><span>Эльга</span></div>
+  <div><q>Была у мастера Марии, стрижка великолепная. Учла все мои пожелания и дала советы по укладке кудрей.</q><span>Alina L.</span></div>
+  <div><q>Всегда предложат водичку, чай, кофе. Уютная атмосфера и вежливый персонал. Рекомендую.</q><span>Александра Ржевская</span></div>
+ </div>
+</div></section>
+
+<section class="ct" id="contacts" style="padding-top:0"><div class="w">
+ <div>
+  <div class="cap">Контакты</div><h2 class="serif" style="margin-bottom:30px">Ждём вас</h2>
+  <div class="row"><span class="cap">Адрес</span><b>Проспект Медиков, 10 к1</b></div>
+  <div class="row"><span class="cap">Часы работы</span><b>Ежедневно, 10:00-22:00</b></div>
+  <div class="row"><span class="cap">Телефон</span><b><a href="tel:+79218668988">+7 921 866-89-88</a></b></div>
+  <div class="btns" style="margin-top:30px"><a class="btn" href="https://n1295388.yclients.ru/" target="_blank" rel="noopener">Записаться онлайн</a><a class="btn line" href="https://t.me/+79218668988" target="_blank" rel="noopener">Telegram</a></div>
+ </div>
+ <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?oid=86873889701&amp;ol=biz&amp;z=16" loading="lazy" title="The Cult на карте"></iframe></div>
+</div></section>
+
+<footer><div class="w"><span>Демо-набросок для The Cult. Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты для салонов и барбершопов</span></div></footer>
+<a class="btn fab" href="https://n1295388.yclients.ru/" target="_blank" rel="noopener">Записаться онлайн</a>
 </body></html>

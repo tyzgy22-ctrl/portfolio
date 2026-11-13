@@ -1,71 +1,195 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Бочаров Барбершоп · демо-набросок сайта</title>
+<title>Бочаров Барбершоп · Будапештская, 56 · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0f0b;--card:#161a13;--text:#eef0e6;--muted:#9aa08c;--acc:#ff5a2b;--acc2:#ffc23d;--acc3:#ff5a2b;--line:#262c20;--leaf:#000}
+:root{--bg:#0b0b0b;--panel:#141414;--line:#262626;--text:#f2f2f2;--muted:#9a9a9a;--red:#e3262b}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font:17px/1.6 "Inter",system-ui,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-h1,h2,h3{font-family:"Oswald",serif;line-height:1.1;text-transform:uppercase;letter-spacing:.02em;}
-.demo{background:var(--acc);color:#111;font-size:13px;font-weight:700;text-align:center;padding:9px 16px}
-.demo a{text-decoration:underline}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
-.logo{font-family:"Oswald";font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.02em;}.logo small{display:block;font-family:"Inter";font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.2em;font-weight:500}
-nav{display:flex;gap:26px;color:var(--muted);font-size:15px}nav a:hover{color:var(--acc)}
-.btn{display:inline-block;background:var(--acc);color:#111;font-weight:700;padding:15px 28px;border-radius:999px;transition:.2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px color-mix(in srgb,var(--acc) 40%,transparent)}
-.btn.ghost{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1.5px var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px;padding-bottom:90px}
-.kind{color:var(--acc);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
-.hero h1{font-size:clamp(36px,6.4vw,68px)}
-.hero p{color:var(--muted);font-size:19px;max-width:520px;margin:22px 0 32px}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.o{font-family:Oswald,sans-serif;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+.demo{background:#1c1c1c;color:#bbb;font-size:12px;text-align:center;padding:7px 12px}.demo a{color:#fff;text-decoration:underline}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:Oswald;text-transform:uppercase;letter-spacing:.06em;font-size:16px;padding:16px 28px;background:var(--red);color:#fff;transition:background .2s}
+.btn:hover{background:#ff3a3f}.btn.out{background:transparent;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}.btn.out:hover{box-shadow:inset 0 0 0 1px #fff;background:rgba(255,255,255,.06)}
+/* header */
+header{position:absolute;left:0;right:0;z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;height:88px}
+.logo{display:flex;align-items:center;gap:12px}.logo img{width:52px;height:52px;object-fit:cover}
+.logo b{font-family:Oswald;font-size:20px;letter-spacing:.12em;text-transform:uppercase;line-height:1}.logo small{display:block;font-size:11px;color:var(--muted);letter-spacing:.25em;margin-top:4px}
+nav{display:flex;gap:30px;font-size:14px;color:#ddd}nav a:hover{color:var(--red)}
+.hphone{font-family:Oswald;font-size:18px;letter-spacing:.04em}
+/* hero */
+.hero{position:relative;min-height:min(100vh,860px);display:flex;align-items:flex-end;background:#000}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:.75}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.35) 60%,rgba(0,0,0,.1)),linear-gradient(0deg,rgba(0,0,0,.9),transparent 45%)}
+.hero .w{position:relative;z-index:2;width:100%;padding-bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.eyebrow{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#ddd;margin-bottom:18px}.eyebrow i{display:inline-block;width:36px;height:2px;background:var(--red);vertical-align:middle;margin-right:12px}
+.hero h1{font-size:clamp(56px,10vw,150px);font-weight:700}.hero h1 span{color:var(--red)}
+.hero p{max-width:520px;font-size:18px;color:#d6d6d6;margin:22px 0 34px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.rate{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:10px 16px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
-.rate b{font-size:26px;font-family:"Oswald"}.rate span{color:var(--muted);font-size:14px;line-height:1.3}.stars{color:#f5b301;letter-spacing:2px}
-.art{width:100%;max-width:420px;justify-self:center;filter:drop-shadow(0 30px 60px rgba(0,0,0,.25))}
-.spin{animation:spin 14s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-section{padding:90px 0}.sh{margin-bottom:40px}.sh h2{font-size:clamp(32px,4.6vw,52px)}.sh p{color:var(--muted);margin-top:10px;max-width:560px}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.f{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;transition:.25s}.f:hover{border-color:var(--acc);transform:translateY(-4px)}
-.f span{font-family:"Oswald";font-size:34px;color:var(--acc)}.f h3{font-size:21px;margin:12px 0 6px}.f p{color:var(--muted);font-size:15px}
-.price{background:var(--card);border-block:1px solid var(--line)}
-.rows{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
-.row{display:flex;align-items:baseline;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}.row b{font-weight:500}
-.row i{flex:1;border-bottom:1px dotted var(--muted);opacity:.5;transform:translateY(-5px)}.row span{font-weight:700;color:var(--acc);white-space:nowrap}
-.note{color:var(--muted);font-size:14px;margin-top:22px}
-.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:40px}
-.card h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px}.card p{color:var(--muted);margin-bottom:10px}.card p b{color:var(--text)}
-.big{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#111;border:0}
-.big .n{font-family:"Oswald";font-size:84px;line-height:1}.big p{color:inherit;opacity:.85}.big a{margin-top:20px;font-weight:700;text-decoration:underline}
-footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}footer a{color:var(--acc);font-weight:700}
-@media(max-width:860px){nav{display:none}.hero .wrap,.find .wrap{grid-template-columns:1fr}.art{max-width:280px;order:-1}.feats,.rows{grid-template-columns:1fr}section{padding:64px 0}.card{padding:28px}}
+.award{width:260px;flex:none;border-left:2px solid var(--red);padding:6px 0 6px 20px}
+.award .o{font-size:44px}.award .o small{font-size:18px;color:var(--muted)}.award p{font-size:14px;color:#cfcfcf;margin-top:8px}
+.award .tag{display:inline-block;margin-top:16px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);padding:7px 12px}
+/* ticker */
+.tick{background:var(--red);overflow:hidden;white-space:nowrap;padding:16px 0}
+.tick div{display:inline-block;animation:run 30s linear infinite;font-family:Oswald;font-size:22px;text-transform:uppercase;letter-spacing:.08em}
+.tick span{margin:0 26px;opacity:.55}@keyframes run{to{transform:translateX(-50%)}}
+section{padding:120px 0}
+.label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:18px}
+h2{font-size:clamp(40px,6vw,76px)}
+/* about */
+.about .w{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:center}
+.about .pic{position:relative}.about .pic img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.about .pic img+img{position:absolute;width:46%;aspect-ratio:1;right:-40px;bottom:-40px;border:8px solid var(--bg)}
+.about p{color:#c9c9c9;font-size:17px;margin-top:24px;max-width:560px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;border-top:1px solid var(--line)}
+.facts div{padding:24px 0}.facts b{display:block;font-family:Oswald;font-size:46px;line-height:1}.facts span{font-size:13px;color:var(--muted)}
+/* price */
+.price{background:var(--panel)}
+.price .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.price .head p{color:var(--muted);max-width:360px}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px}
+.grp h3{font-size:22px;letter-spacing:.08em;color:var(--red);margin-bottom:10px}
+.it{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
+.it b{font-weight:500}.it small{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:2px}
+.it span{font-family:Oswald;font-size:20px;white-space:nowrap}
+.combo{margin-top:64px;display:grid;grid-template-columns:1.2fr 1fr;background:#000}
+.combo img{height:100%;object-fit:cover;aspect-ratio:16/10}
+.combo div{padding:48px;display:flex;flex-direction:column;justify-content:center}
+.combo .o{font-size:64px;color:var(--red)}.combo h3{font-size:30px;margin:6px 0 12px}.combo p{color:#bdbdbd;margin-bottom:26px}
+/* team */
+.team .w>h2{margin-bottom:56px}
+.m{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
+.m:last-child{border-bottom:1px solid var(--line)}
+.m h3{font-size:46px}.m h3+span{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.m blockquote{font-size:20px;line-height:1.5;color:#e6e6e6}.m cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--muted)}
+/* gallery */
+.gal{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:8px}
+.grid img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15);transition:filter .3s}.grid img:hover{filter:none}
+.grid .t{grid-row:span 2}.grid .wd{grid-column:span 2}
+/* contacts */
+.cont{background:var(--panel)}
+.cont .w{display:grid;grid-template-columns:1fr 1.25fr;gap:56px}
+.cont h2{margin-bottom:34px}
+.row{padding:18px 0;border-bottom:1px solid var(--line)}.row small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.row b{font-size:20px;font-weight:500}
+.door{display:flex;gap:18px;align-items:center;margin-top:30px}.door img{width:110px;height:140px;object-fit:cover}.door p{color:#bdbdbd;font-size:15px}
+.map{min-height:520px;background:#222}.map iframe{width:100%;height:100%;min-height:520px;border:0;filter:grayscale(1) invert(.92) contrast(.9)}
+footer{padding:34px 0;font-size:13px;color:var(--muted)}footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#fff;text-decoration:underline}
+.fab{display:none}
+@media(max-width:900px){
+ nav,.hphone{display:none}header .w{height:72px}
+ .hero .w{flex-direction:column;align-items:flex-start;padding-bottom:110px}.award{width:auto}
+ section{padding:80px 0}
+ .about .w,.pl,.combo,.cont .w{grid-template-columns:1fr}.about .pic img+img{right:-10px;bottom:-30px}
+ .combo div{padding:30px}.m{grid-template-columns:1fr;gap:12px}
+ .grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.grid .wd{grid-column:span 2}
+ .fab{display:flex;justify-content:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+ footer{padding-bottom:90px}
+}
 </style></head><body>
-<div class="demo">Демо-набросок сайта для «Бочаров Барбершоп». Это не официальный сайт: пример того, как он может выглядеть. Автор: <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
-<header><div class="wrap"><a href="#" class="logo">Бочаров Барбершоп<small>Барбершоп</small></a>
-<nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#find">Контакты</a></nav>
-<a href="https://wa.me/79117015010" class="btn" target="_blank" rel="noopener" style="padding:10px 20px;font-size:14px">Записаться</a></div></header>
-<section class="hero" style="padding:0"><div class="wrap"><div>
-<div class="kind">Барбершоп · Санкт-Петербург</div>
-<h1>Стрижка, достойная охотника</h1><p>Барбершоп с Хищником на стене у проспекта Славы. Святослав, Ульяна и Марио подскажут форму, пострижут и объяснят укладку. Награда «Хорошее место 2026» от Яндекс Карт.</p>
-<div class="btns"><a href="https://wa.me/79117015010" class="btn" target="_blank" rel="noopener">Записаться</a><a href="#price" class="btn ghost">Смотреть цены</a></div>
-<div class="rate"><b>5,0</b><span><span class="stars">★★★★★</span><br>108 отзывов в Яндекс Картах</span></div>
-</div><svg viewBox="0 0 300 300" class="art"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="var(--acc)"/><stop offset="1" stop-color="var(--acc2)"/></linearGradient></defs>
-  <circle cx="150" cy="150" r="130" fill="none" stroke="var(--line)" stroke-width="2"/>
-  <g transform="rotate(-35 150 150)"><rect x="135" y="40" width="30" height="150" rx="6" fill="url(#g1)"/><rect x="128" y="185" width="44" height="70" rx="10" fill="var(--text)"/>
-  <rect x="139" y="50" width="22" height="130" rx="4" fill="none" stroke="var(--bg)" stroke-width="2" opacity=".35"/></g>
-  <g transform="rotate(35 150 150)" opacity=".9"><rect x="141" y="30" width="18" height="170" rx="9" fill="var(--text)"/><g fill="var(--bg)"><rect x="141" y="60" width="18" height="3"/><rect x="141" y="72" width="18" height="3"/><rect x="141" y="84" width="18" height="3"/><rect x="141" y="96" width="18" height="3"/><rect x="141" y="108" width="18" height="3"/><rect x="141" y="120" width="18" height="3"/></g></g></svg></div></section>
-<section id="about"><div class="wrap"><div class="sh"><h2>Что будет на сайте</h2><p>Всё, чтобы новый клиент нашёл вас в поиске, понял цены и сразу записался.</p></div>
-<div class="feats"><div class="f"><span>01</span><h3>Запись онлайн</h3><p>Мастер и время в пару касаний, без звонков</p></div><div class="f"><span>02</span><h3>Мастера и их работы</h3><p>Святослав, Ульяна, Марио: фото стрижек, чтобы выбрать своего</p></div><div class="f"><span>03</span><h3>Весь прайс на виду</h3><p>Стрижки, бритьё, борода, уход и комплексы с ценами</p></div></div></div></section>
-<section class="price" id="price"><div class="wrap"><div class="sh"><h2>Цены</h2></div><div class="rows"><div class="row"><b>Стрижка всеми инструментами</b><i></i><span>1 650 ₽</span></div><div class="row"><b>Стрижка машинкой (fade)</b><i></i><span>1 350 ₽</span></div><div class="row"><b>Стрижка только ножницами</b><i></i><span>2 100 ₽</span></div><div class="row"><b>Стрижка + борода и усы</b><i></i><span>2 800 ₽</span></div><div class="row"><b>Моделирование бороды и усов</b><i></i><span>1 350 ₽</span></div><div class="row"><b>Влажное бритьё лица</b><i></i><span>1 350 ₽</span></div></div>
-<p class="note">Цены из вашей карточки на Яндекс Картах. На сайте будет полный прайс: бритьё, камуфляж, уход и комплексы.</p></div></section><section id="reviews"><div class="wrap"><div class="sh"><h2>Отзывы</h2><p>Настоящие отзывы из Яндекс Картах</p></div><div class="feats"><div class="f"><p style="color:var(--text);font-size:16px">«Очень интересный дизайн, который крутится вокруг «Хищника». Мастер Святослав не просто молча выполнил работу по референсу, а объяснил, что лучше подойдёт мне.»</p><h3 style="font-size:16px;margin-top:14px">Константин М.</h3></div><div class="f"><p style="color:var(--text);font-size:16px">«Отличное и очень антуражное место! Мастер Ульяна сделала прекрасную стрижку. Буду посещать этот барбершоп, несмотря на то, что живу в другом районе.»</p><h3 style="font-size:16px;margin-top:14px">Армен К.</h3></div><div class="f"><p style="color:var(--text);font-size:16px">«Над моими волосами и бородой поработала Ульяна, и мне всё понравилось. Ценник адекватный, отношение хорошее. Рекомендую.»</p><h3 style="font-size:16px;margin-top:14px">Павел</h3></div></div></div></section>
-<section class="find" id="find"><div class="wrap">
-<div class="card"><h2>Как нас найти</h2><p><b>Адрес:</b> Будапештская улица, 56</p><p><b>Телефон и мессенджеры:</b> кнопки WhatsApp, Telegram и звонка</p><p><b>Часы работы:</b> ежедневно до 21:00</p>
-<a href="https://yandex.ru/maps/org/165478340490/" class="btn" style="margin-top:14px" target="_blank" rel="noopener">Открыть в Яндекс Картах</a></div>
-<div class="card big"><div class="n">5,0</div><p>средняя оценка по 108 отзывам в Яндекс Картах</p><p>На сайте покажем ваши настоящие отзывы и обновим их автоматически.</p></div>
+<div class="demo">Демо-набросок сайта для «Бочаров Барбершоп». Фото, цены и отзывы взяты из вашей карточки на Яндекс Картах. Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
+
+<header><div class="w">
+ <a href="#" class="logo"><img src="img/logo.jpg" alt="Логотип Бочаров Барбершоп"><span><b>Bocharov</b><small>barbershop</small></span></a>
+ <nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#team">Мастера</a><a href="#contacts">Контакты</a></nav>
+ <a href="tel:+79117015010" class="hphone">+7 911 701-50-10</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+ <img src="img/hero.jpg" alt="Барбер за работой в зале с Хищником на стене">
+ <div class="w">
+  <div>
+   <div class="eyebrow"><i></i>Будапештская, 56 · м. Проспект Славы</div>
+   <h1>Bocharov<br><span>barbershop</span></h1>
+   <p>Мужские стрижки, моделирование бороды и бритьё опасной бритвой. Мастер подскажет форму под ваше лицо и объяснит, как укладывать дома.</p>
+   <div class="btns"><a class="btn" href="https://wa.me/79117015010" target="_blank" rel="noopener">Записаться в WhatsApp</a><a class="btn out" href="#price">Цены</a></div>
+  </div>
+  <div class="award">
+   <div class="o">5,0 <small>/ 5</small></div>
+   <p>144 оценки и 108 отзывов на Яндекс Картах</p>
+   <span class="tag">Хорошее место 2026</span>
+  </div>
+ </div>
+</section>
+
+<div class="tick"><div>Стрижки<span>/</span>Fade<span>/</span>Борода и усы<span>/</span>Опасная бритва<span>/</span>Камуфляж седины<span>/</span>Уход за лицом<span>/</span>Детские стрижки<span>/</span>Стрижки<span>/</span>Fade<span>/</span>Борода и усы<span>/</span>Опасная бритва<span>/</span>Камуфляж седины<span>/</span>Уход за лицом<span>/</span>Детские стрижки<span>/</span></div></div>
+
+<section class="about" id="about"><div class="w">
+ <div class="pic"><img src="img/g1.jpg" alt="Бюст Хищника в зале"><img src="img/g5.jpg" alt="Инструменты барбера"></div>
+ <div>
+  <div class="label">Барбершоп с характером</div>
+  <h2>Здесь охотятся<br>за идеальной стрижкой</h2>
+  <p>Зелёные стены, шестиугольный свет под потолком и Хищник, который присматривает за каждым креслом. Гости пишут, что приходят ради атмосферы, а остаются ради мастеров: те не молча режут по картинке, а советуют, что подойдёт именно вам.</p>
+  <p>Стрижём взрослых и детей, моделируем бороду, бреем опасной бритвой с распариванием, делаем камуфляж седины и уход для лица.</p>
+  <div class="facts"><div><b>5,0</b><span>рейтинг на Яндекс Картах</span></div><div><b>108</b><span>отзывов гостей</span></div><div><b>10-21</b><span>ежедневно, без выходных</span></div></div>
+ </div>
 </div></section>
-<footer><div class="wrap"><span>Демо-набросок для «Бочаров Барбершоп». Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты за 3-5 дней</span></div></footer>
+
+<section class="price" id="price"><div class="w">
+ <div class="head"><div><div class="label">Прайс</div><h2>Услуги и цены</h2></div><p>Цены из вашей карточки на Яндекс Картах. На готовом сайте прайс обновляется за минуту.</p></div>
+ <div class="pl">
+  <div class="grp"><h3>Стрижки</h3>
+   <div class="it"><b>Стрижка всеми инструментами<small>ножницы, машинка, триммер</small></b><span>1 650 ₽</span></div>
+   <div class="it"><b>Стрижка только машинкой<small>с переходом в технике fade</small></b><span>1 350 ₽</span></div>
+   <div class="it"><b>Стрижка только ножницами<small>удлинённые стрижки</small></b><span>2 100 ₽</span></div>
+   <div class="it"><b>Короткая стрижка машинкой<small>одна насадка</small></b><span>700 ₽</span></div>
+   <div class="it"><b>Подростковая, 10-15 лет</b><span>от 1 500 ₽</span></div>
+   <div class="it"><b>Детская, до 9 лет</b><span>1 200 ₽</span></div>
+  </div>
+  <div class="grp"><h3>Борода и бритьё</h3>
+   <div class="it"><b>Моделирование бороды и усов<small>форма, окантовка, опасная бритва, укладка</small></b><span>1 350 ₽</span></div>
+   <div class="it"><b>Влажное бритьё лица<small>опасной бритвой с распариванием</small></b><span>1 350 ₽</span></div>
+   <div class="it"><b>Влажное бритьё головы</b><span>1 600 ₽</span></div>
+   <div class="it"><b>Сухое бритьё триммером</b><span>900 ₽</span></div>
+  </div>
+  <div class="grp"><h3>Камуфляж</h3>
+   <div class="it"><b>Камуфляж седины</b><span>1 400 ₽</span></div>
+   <div class="it"><b>Камуфляж бороды и усов</b><span>1 200 ₽</span></div>
+   <div class="it"><b>Камуфляж усов</b><span>600 ₽</span></div>
+  </div>
+  <div class="grp"><h3>Уход</h3>
+   <div class="it"><b>Уход для лица<small>сертифицированный косметолог</small></b><span>1 000 ₽</span></div>
+   <div class="it"><b>Массаж головы</b><span>600 ₽</span></div>
+   <div class="it"><b>Укладка с мытьём головы</b><span>350 ₽</span></div>
+   <div class="it"><b>Воск: уши, нос, межбровье</b><span>250 ₽</span></div>
+  </div>
+ </div>
+ <div class="combo"><img src="img/g4.jpg" alt="Зал барбершопа"><div>
+  <div class="o">2 800 ₽</div><h3>Комплекс #1</h3><p>Стрижка всеми инструментами и моделирование бороды и усов. Вариант со стрижкой машинкой: 2 500 ₽.</p>
+  <a class="btn" href="https://wa.me/79117015010" target="_blank" rel="noopener" style="align-self:flex-start">Записаться на комплекс</a></div></div>
+</div></section>
+
+<section class="team" id="team"><div class="w">
+ <div class="label">Мастера</div><h2>Кто вас пострижёт</h2>
+ <div class="m"><div><h3>Святослав</h3><span>барбер</span></div><div><blockquote>«Не просто молча выполнил работу по референсу, а объяснил, что лучше подойдёт мне, посоветовал, порекомендовал. Причёской очень доволен.»</blockquote><cite>Константин М., Яндекс Карты</cite></div></div>
+ <div class="m"><div><h3>Ульяна</h3><span>барбер</span></div><div><blockquote>«Мастер Ульяна сделала прекрасную стрижку. Прихожу уже второй раз и буду ходить, несмотря на то, что живу в другом районе.»</blockquote><cite>Армен К., Яндекс Карты</cite></div></div>
+ <div class="m"><div><h3>Марио</h3><span>барбер</span></div><div><blockquote>«Муж сам выбрал VIP-пакет: маска для волос, уход для лица, стрижка и борода. Говорит, что никогда так хорошо не выглядел после стрижки.»</blockquote><cite>Мария, Яндекс Карты</cite></div></div>
+</div></section>
+
+<section class="gal"><div class="w"><div class="grid">
+ <img class="t" src="img/g8.jpg" alt="Кресло и Хищник на стене" loading="lazy">
+ <img class="wd" src="img/g2.jpg" alt="Рабочее место барбера" loading="lazy">
+ <img class="t" src="img/g3.jpg" alt="Зал с шестиугольным светом" loading="lazy">
+ <img src="img/g6.jpg" alt="Косметика для волос и бороды" loading="lazy">
+ <img src="img/g7.jpg" alt="Кофемашина для гостей" loading="lazy">
+</div></div></section>
+
+<section class="cont" id="contacts"><div class="w">
+ <div>
+  <div class="label">Контакты</div><h2>Ждём в гости</h2>
+  <div class="row"><small>Адрес</small><b>Будапештская улица, 56</b></div>
+  <div class="row"><small>Часы работы</small><b>Ежедневно, 10:00-21:00</b></div>
+  <div class="row"><small>Телефон и WhatsApp</small><b><a href="tel:+79117015010">+7 911 701-50-10</a></b></div>
+  <div class="btns" style="margin-top:28px"><a class="btn" href="https://wa.me/79117015010" target="_blank" rel="noopener">Записаться</a><a class="btn out" href="https://yandex.ru/maps/org/165478340490/" target="_blank" rel="noopener">Маршрут</a></div>
+  <div class="door"><img src="img/door.jpg" alt="Вход в барбершоп" loading="lazy"><p>Вход с улицы, по ступенькам. Ищите Хищника на окне.</p></div>
+ </div>
+ <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?oid=165478340490&amp;ol=biz&amp;z=16" loading="lazy" title="Бочаров Барбершоп на карте"></iframe></div>
+</div></section>
+
+<footer><div class="w"><span>Демо-набросок для «Бочаров Барбершоп». Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты для барбершопов</span></div></footer>
+<a class="btn fab" href="https://wa.me/79117015010" target="_blank" rel="noopener">Записаться в WhatsApp</a>
 </body></html>
