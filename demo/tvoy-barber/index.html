@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Твой барбер · проспект Медиков, 10 · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#14100d;--panel:#1d1713;--line:#33291f;--text:#f4ede6;--muted:#a3968a;--acc:#d0743c}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.o{font-family:Oswald,sans-serif;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+.demo{background:#211a15;color:#b9ab9d;font-size:12px;text-align:center;padding:7px 12px}.demo a{color:#fff;text-decoration:underline}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:Oswald;text-transform:uppercase;letter-spacing:.06em;font-size:16px;padding:16px 28px;background:var(--acc);color:#fff;transition:background .2s}
+.btn:hover{background:#e3854b}.btn.out{background:transparent;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}.btn.out:hover{box-shadow:inset 0 0 0 1px #fff;background:rgba(255,255,255,.06)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:88px}
+.logo b{font-family:Oswald;font-size:24px;letter-spacing:.12em;text-transform:uppercase;line-height:1}.logo small{display:block;font-size:11px;color:var(--muted);letter-spacing:.3em;margin-top:5px}
+nav{display:flex;gap:30px;font-size:14px;color:#e6dbd0}nav a:hover{color:var(--acc)}
+.hphone{font-family:Oswald;font-size:18px;letter-spacing:.04em}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:30px;padding-bottom:90px}
+.eyebrow{font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:#e6dbd0;margin-bottom:18px}.eyebrow i{display:inline-block;width:36px;height:2px;background:var(--acc);vertical-align:middle;margin-right:12px}
+.hero h1{font-size:clamp(56px,8.5vw,128px);font-weight:700}.hero h1 span{color:var(--acc)}
+.hero p{max-width:520px;font-size:18px;color:#d8ccc0;margin:24px 0 34px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.stars{display:flex;gap:28px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stars b{display:block;font-family:Oswald;font-size:40px;line-height:1}.stars span{font-size:13px;color:var(--muted)}
+.hpic{position:relative}.hpic img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hpic .tag{position:absolute;left:-24px;bottom:34px;background:var(--acc);font-family:Oswald;text-transform:uppercase;letter-spacing:.1em;font-size:14px;padding:12px 18px}
+.tick{background:var(--acc);overflow:hidden;white-space:nowrap;padding:16px 0}
+.tick div{display:inline-block;animation:run 30s linear infinite;font-family:Oswald;font-size:22px;text-transform:uppercase;letter-spacing:.08em}
+.tick span{margin:0 26px;opacity:.55}@keyframes run{to{transform:translateX(-50%)}}
+section{padding:120px 0}
+.label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:18px}
+h2{font-size:clamp(40px,6vw,76px)}
+.about .w{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:center}
+.about .pic{position:relative}.about .pic img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.about .pic img+img{position:absolute;width:46%;aspect-ratio:1;right:-40px;bottom:-40px;border:8px solid var(--bg)}
+.about p{color:#cfc3b7;font-size:17px;margin-top:24px;max-width:560px}
+.price{background:var(--panel)}
+.price .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:56px;flex-wrap:wrap}
+.price .head p{color:var(--muted);max-width:360px}
+.pl{display:grid;grid-template-columns:1fr 1fr;gap:56px 80px}
+.grp h3{font-size:22px;letter-spacing:.08em;color:var(--acc);margin-bottom:10px}
+.it{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid var(--line)}
+.it b{font-weight:500}.it small{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:2px}
+.it span{font-family:Oswald;font-size:20px;white-space:nowrap}
+.fun{margin-top:64px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fun div{border:1px solid var(--line);padding:32px}
+.fun .o{font-size:30px}.fun .o em{font-style:normal;color:var(--acc);margin-left:10px}.fun p{color:#cfc3b7;margin-top:12px;font-size:17px}
+.combo{margin-top:16px;display:grid;grid-template-columns:.8fr 1.2fr;background:#0e0b09}
+.combo img{height:100%;width:100%;object-fit:cover;max-height:520px}
+.combo div{padding:48px;display:flex;flex-direction:column;justify-content:center}
+.combo .o{font-size:56px;color:var(--acc)}.combo h3{font-size:30px;margin:6px 0 12px}.combo p{color:#c4b7aa;margin-bottom:26px}
+.team .w>h2{margin-bottom:56px}
+.m{display:grid;grid-template-columns:260px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
+.m:last-child{border-bottom:1px solid var(--line)}
+.m h3{font-size:34px}.m h3+span{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.m blockquote{font-size:20px;line-height:1.5;color:#ece3da}.m cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--muted)}
+.gal{padding-top:0}.gal h2{margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:300px;gap:8px}
+.grid img{width:100%;height:100%;object-fit:cover;transition:filter .3s;filter:saturate(.9)}.grid img:hover{filter:none}
+.grid .t{grid-row:span 2}
+.cont{background:var(--panel)}
+.cont .w{display:grid;grid-template-columns:1fr 1.25fr;gap:56px}
+.cont h2{margin-bottom:34px}
+.row{padding:18px 0;border-bottom:1px solid var(--line)}.row small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.row b{font-size:20px;font-weight:500}
+.map{min-height:520px;background:#241c16}.map iframe{width:100%;height:100%;min-height:520px;border:0;filter:grayscale(1) invert(.9) sepia(.25) contrast(.9)}
+footer{padding:34px 0;font-size:13px;color:var(--muted)}footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#fff;text-decoration:underline}
+.fab{display:none}
+@media(max-width:900px){
+ nav,.hphone{display:none}header .w{height:72px}
+ .hero .w{grid-template-columns:1fr;gap:36px;padding-bottom:60px}.hpic .tag{left:12px}
+ section{padding:80px 0}
+ .about .w,.pl,.combo,.cont .w,.fun{grid-template-columns:1fr}.about .pic img+img{right:-10px;bottom:-30px}
+ .combo div{padding:30px}.m{grid-template-columns:1fr;gap:12px}
+ .grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+ .fab{display:flex;justify-content:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+ footer{padding-bottom:90px}
+}
+</style></head><body>
+<div class="demo">Демо-набросок сайта для барбершопа «Твой барбер». Фото, цены и отзывы взяты из вашей карточки на Яндекс Картах. Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
+
+<header><div class="w">
+ <a href="#" class="logo"><b>Твой барбер</b><small>barbershop</small></a>
+ <nav><a href="#about">О нас</a><a href="#price">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+ <a href="tel:+79112492871" class="hphone">+7 911 249-28-71</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <div class="eyebrow"><i></i>Проспект Медиков, 10 · Петроградка</div>
+  <h1>Твой<br><span>барбер</span></h1>
+  <p>Мужские стрижки ножницами и машинкой, моделирование бороды, камуфляж седины и уход за лицом. Перед стрижкой мастер советуется с вами, после показывает, как укладывать дома.</p>
+  <div class="btns"><a class="btn" href="https://n1597374.yclients.com/" target="_blank" rel="noopener">Записаться онлайн</a><a class="btn out" href="#price">Цены</a></div>
+  <div class="stars"><div><b>5,0</b><span>рейтинг на Яндекс Картах</span></div><div><b>45</b><span>отзывов гостей</span></div><div><b>10-22</b><span>ежедневно</span></div></div>
+ </div>
+ <div class="hpic"><img src="img/hero.jpg" alt="Мастер готовит гостя к стрижке в зале с растениями"><span class="tag">Хорошее место 2026</span></div>
+</div></section>
+
+<div class="tick"><div>Стрижки<span>/</span>Борода<span>/</span>Камуфляж седины<span>/</span>Уход за лицом<span>/</span>Укладка<span>/</span>Можно с собакой<span>/</span>Стрижки<span>/</span>Борода<span>/</span>Камуфляж седины<span>/</span>Уход за лицом<span>/</span>Укладка<span>/</span>Можно с собакой<span>/</span></div></div>
+
+<section class="about" id="about"><div class="w">
+ <div class="pic"><img src="img/a1.jpg" alt="Кожаное кресло барбера у окна"><img src="img/a2.jpg" alt="Инструменты: ножницы, триммер, бритва"></div>
+ <div>
+  <div class="label">Барбершоп на Петроградке</div>
+  <h2>Приходите<br>как к своему</h2>
+  <p>Бетонные стены, растения, кожаные кресла цвета карамели и качели у окна. В двух шагах от остановки «Улица Академика Павлова», 15 минут пешком от Петроградской.</p>
+  <p>Гости в отзывах чаще всего пишут про мастера Марину: внимательно слушает, даёт советы по укладке и делает ровно ту форму, которую просили. Можно прийти с собакой, есть Wi-Fi.</p>
+ </div>
+</div></section>
+
+<section class="price" id="price"><div class="w">
+ <div class="head"><div><div class="label">Прайс</div><h2>Услуги и цены</h2></div><p>Цены из вашей карточки на Яндекс Картах. На готовом сайте прайс обновляется за минуту.</p></div>
+ <div class="pl">
+  <div class="grp"><h3>Стрижки</h3>
+   <div class="it"><b>Мужская стрижка<small>любая длина: классическая удлинённая или короткая с фейдом</small></b><span>3 000 ₽</span></div>
+   <div class="it"><b>Стрижка ножницами<small>консультация, мытьё волос, стрижка, укладка</small></b><span>3 000 ₽</span></div>
+   <div class="it"><b>Стрижка машинкой</b><span>1 500 ₽</span></div>
+   <div class="it"><b>Укладка</b><span>600 ₽</span></div>
+  </div>
+  <div class="grp"><h3>Борода и уход</h3>
+   <div class="it"><b>Моделирование бороды</b><span>2 200 ₽</span></div>
+   <div class="it"><b>Камуфляж седины</b><span>1 700 ₽</span></div>
+   <div class="it"><b>Премиум уход за кожей головы</b><span>1 100 ₽</span></div>
+   <div class="it"><b>Уход за лицом</b><span>1 100 ₽</span></div>
+   <div class="it"><b>Коррекция бровей<small>«Будет больно. Буду выщипывать пинцетом»</small></b><span>800 ₽</span></div>
+   <div class="it"><b>Коррекция воском</b><span>400 ₽</span></div>
+  </div>
+ </div>
+ <div class="fun">
+  <div><div class="o">Молчаливый барбер<em>150 ₽</em></div><p>«Никаких разговоров, подстрижёмся в тишине, я понимаю, что ты устал».</p></div>
+  <div><div class="o">Друг на час<em>150 ₽</em></div><p>«Обсуждаем всех! Твои коллеги всё делают неправильно, начальник дурак, жена не понимает, я выслушаю всё!»</p></div>
+ </div>
+ <div class="combo"><img src="img/combo.jpg" alt="Качели и стойка с одеждой в зале"><div>
+  <div class="o">4 700 ₽</div><h3>Стрижка + борода</h3><p>Стрижка и моделирование бороды за один визит.</p>
+  <a class="btn" href="https://n1597374.yclients.com/" target="_blank" rel="noopener" style="align-self:flex-start">Записаться</a></div></div>
+</div></section>
+
+<section class="team" id="reviews"><div class="w">
+ <div class="label">Отзывы</div><h2>Что пишут гости</h2>
+ <div class="m"><div><h3>Вэнькэ Юй</h3><span>Яндекс Карты</span></div><div><blockquote>«Марина всё сделала аккуратно, чутко прислушалась к моим пожеланиям, дала дельные советы по укладке. Форма получилась именно такая, как я хотел. Обязательно приду ещё раз!»</blockquote><cite>июль</cite></div></div>
+ <div class="m"><div><h3>Александр Т.</h3><span>Яндекс Карты</span></div><div><blockquote>«Качественная стрижка, милая беседа и прекрасная улыбка Марины. Однозначно приду в следующий раз!»</blockquote><cite>август</cite></div></div>
+ <div class="m"><div><h3>Muhammed</h3><span>Яндекс Карты</span></div><div><blockquote>«Хочу выразить благодарность мастеру Марине за великолепную стрижку! Стрижка получилась просто супер, с радостью рекомендую.»</blockquote><cite>октябрь</cite></div></div>
+</div></section>
+
+<section class="gal"><div class="w">
+ <div class="label">Атмосфера</div><h2>Как у нас</h2>
+ <div class="grid">
+ <img class="t" src="img/g1.jpg" alt="Мальчик после стрижки" loading="lazy">
+ <img src="img/g4.jpg" alt="Оформление бороды ножницами" loading="lazy">
+ <img class="t" src="img/g2.jpg" alt="Гость в кресле барбера" loading="lazy">
+ <img src="img/g6.jpg" alt="Растения у рабочего места" loading="lazy">
+ <img src="img/g3.jpg" alt="Мытьё волос у зеркала с подсветкой" loading="lazy">
+ <img class="t" src="img/g5.jpg" alt="Стойка администратора с лампами" loading="lazy">
+ <img src="img/g7.jpg" alt="Машинки и инструменты" loading="lazy">
+ <img src="img/g9.jpg" alt="Косметика для волос" loading="lazy">
+ </div>
+</div></section>
+
+<section class="cont" id="contacts"><div class="w">
+ <div>
+  <div class="label">Контакты</div><h2>Ждём в гости</h2>
+  <div class="row"><small>Адрес</small><b>Проспект Медиков, 10, корп. 1</b></div>
+  <div class="row"><small>Часы работы</small><b>Ежедневно, 10:00-22:00</b></div>
+  <div class="row"><small>Телефон и WhatsApp</small><b><a href="tel:+79112492871">+7 911 249-28-71</a></b></div>
+  <div class="row"><small>Оплата</small><b>Наличными или переводом</b></div>
+  <div class="btns" style="margin-top:28px"><a class="btn" href="https://n1597374.yclients.com/" target="_blank" rel="noopener">Записаться онлайн</a><a class="btn out" href="https://yandex.ru/maps/org/243967216863/" target="_blank" rel="noopener">Маршрут</a></div>
+ </div>
+ <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?oid=243967216863&amp;ol=biz&amp;z=16" loading="lazy" title="Твой барбер на карте"></iframe></div>
+</div></section>
+
+<footer><div class="w"><span>Демо-набросок для барбершопа «Твой барбер». Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты для барбершопов</span></div></footer>
+<a class="btn fab" href="https://n1597374.yclients.com/" target="_blank" rel="noopener">Записаться онлайн</a>
+</body></html>
