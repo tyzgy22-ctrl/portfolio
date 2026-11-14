@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Original Beauty Studio · Шушары · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f1;--panel:#efebe4;--line:#ddd6cb;--text:#151412;--muted:#6f6a62;--acc:#a8864f;--dark:#111}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.o{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.02}
+.demo{background:var(--dark);color:#bbb;font-size:12px;text-align:center;padding:7px 12px}.demo a{color:#fff;text-decoration:underline}
+.btn{display:inline-flex;align-items:center;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:17px 30px;background:var(--dark);color:#fff;transition:background .2s}
+.btn:hover{background:var(--acc)}.btn.out{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--text)}.btn.out:hover{background:var(--text);color:#fff}
+header .w{display:flex;align-items:center;justify-content:space-between;height:92px}
+.logo{display:flex;align-items:center;gap:12px}.logo img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.logo b{font-family:"Cormorant Garamond",serif;font-size:26px;letter-spacing:.06em}.logo small{display:block;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+nav{display:flex;gap:30px;font-size:14px}nav a:hover{color:var(--acc)}
+.hphone{font-weight:600}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding-top:20px;padding-bottom:100px}
+.eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+.hero h1{font-size:clamp(54px,8vw,112px)}.hero h1 em{font-style:italic;color:var(--acc)}
+.hero p{max-width:500px;font-size:18px;color:#3d3a35;margin:26px 0 36px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.stars{display:flex;gap:40px;margin-top:48px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.stars b{display:block;font-family:"Cormorant Garamond",serif;font-size:46px;line-height:1}.stars span{font-size:13px;color:var(--muted)}
+.hpic{position:relative}.hpic img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.hpic .tag{position:absolute;left:-26px;bottom:36px;background:var(--dark);color:#fff;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:13px 18px}
+section{padding:110px 0}
+.label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--acc);margin-bottom:16px}
+h2{font-size:clamp(42px,5.5vw,70px)}
+.about{background:var(--dark);color:#eee}
+.about .w{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about .pic img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.about p{color:#c9c4bb;font-size:17px;margin-top:22px;max-width:540px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}.chips span{border:1px solid #444;padding:7px 14px;font-size:13px;color:#ddd}
+.price .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:50px;flex-wrap:wrap}
+.price .head p{color:var(--muted);max-width:380px}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);padding:34px}
+.card h3{font-size:30px}.card .o{font-size:40px;color:var(--acc);margin:14px 0 10px}.card p{color:var(--muted);font-size:15px}
+.team{background:var(--panel)}
+.team .w>h2{margin-bottom:50px}
+.m{display:grid;grid-template-columns:240px 1fr;gap:40px;padding:34px 0;border-top:1px solid var(--line)}
+.m:last-child{border-bottom:1px solid var(--line)}
+.m h3{font-size:32px}.m h3+span{font-size:12px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
+.m blockquote{font-size:19px;line-height:1.55}.m cite{display:block;margin-top:10px;font-style:normal;font-size:14px;color:var(--muted)}
+.gal h2{margin-bottom:12px}.gal .sub{color:var(--muted);margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:290px;gap:8px}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid .t{grid-row:span 2}
+.cont .w{display:grid;grid-template-columns:1fr 1.2fr;gap:56px}
+.cont h2{margin-bottom:30px}
+.row{padding:17px 0;border-bottom:1px solid var(--line)}.row small{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.row b{font-size:19px;font-weight:500}
+.door{display:flex;gap:18px;align-items:center;margin-top:28px}.door img{width:120px;height:150px;object-fit:cover}.door p{color:var(--muted);font-size:15px}
+.map{min-height:520px;background:#e5e0d8}.map iframe{width:100%;height:100%;min-height:520px;border:0;filter:grayscale(1)}
+footer{background:var(--dark);color:#999;padding:32px 0;font-size:13px}footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:#fff;text-decoration:underline}
+.fab{display:none}
+@media(max-width:900px){
+ nav,.hphone{display:none}header .w{height:76px}
+ .hero .w{grid-template-columns:1fr;gap:36px;padding-bottom:60px}.hpic .tag{left:12px}
+ section{padding:76px 0}
+ .about .w,.pl,.cont .w{grid-template-columns:1fr}.m{grid-template-columns:1fr;gap:10px}
+ .grid{grid-template-columns:1fr 1fr;grid-auto-rows:220px}
+ .fab{display:flex;justify-content:center;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+ footer{padding-bottom:90px}
+}
+</style></head><body>
+<div class="demo">Демо-набросок сайта для Original Beauty Studio. Фото, цены и отзывы взяты из вашей карточки на Яндекс Картах. Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a></div>
+
+<header><div class="w">
+ <a href="#" class="logo"><img src="img/logo.jpg" alt="Логотип Original"><span><b>ORIGINAL</b><small>beauty studio</small></span></a>
+ <nav><a href="#about">О студии</a><a href="#price">Цены</a><a href="#works">Работы</a><a href="#contacts">Контакты</a></nav>
+ <a href="tel:+79818026004" class="hphone">+7 981 802-60-04</a>
+</div></header>
+
+<section class="hero" style="padding:0"><div class="w">
+ <div>
+  <div class="eyebrow">Шушары · Колпинское шоссе, 129</div>
+  <h1>Стрижки,<br>окрашивание<br><em>и укладки</em></h1>
+  <p>Женские, мужские и детские стрижки, окрашивание и уход за волосами в соседнем дворе. Мастер спрашивает о ваших пожеланиях, моет голову, укладывает и подсказывает, как ухаживать дома.</p>
+  <div class="btns"><a class="btn" href="https://wa.me/79818026004" target="_blank" rel="noopener">Записаться в WhatsApp</a><a class="btn out" href="https://t.me/Bella0007" target="_blank" rel="noopener">Написать в Telegram</a></div>
+  <div class="stars"><div><b>5,0</b><span>рейтинг на Яндекс Картах</span></div><div><b>47</b><span>отзывов</span></div><div><b>10-21</b><span>ежедневно</span></div></div>
+ </div>
+ <div class="hpic"><img src="img/hero.jpg" alt="Зал студии с креслами и зеркалами"><span class="tag">Хорошее место 2026</span></div>
+</div></section>
+
+<section class="about" id="about"><div class="w">
+ <div class="pic"><img src="img/a1.jpg" alt="Цветы и уходовая косметика в студии"></div>
+ <div>
+  <div class="label">О студии</div>
+  <h2>Original.<br>Trust me!</h2>
+  <p>Студия у Туровской улицы: гости пишут, что записаться можно день в день, в зале чисто, играет хорошая музыка, а мастер Белла понимает с двух слов, какую стрижку вы хотите.</p>
+  <p>Делаем всё для волос, от короткой мужской стрижки с переходом до локонов, сложного окрашивания и восстановления.</p>
+  <div class="chips"><span>Стрижки</span><span>Окрашивание</span><span>Мелирование</span><span>Омбре</span><span>Тонирование</span><span>Локоны и керли</span><span>Французские косы</span><span>Экранирование</span><span>Детские стрижки</span><span>Подарочные сертификаты</span></div>
+ </div>
+</div></section>
+
+<section class="price" id="price"><div class="w">
+ <div class="head"><div><div class="label">Цены</div><h2>Сколько стоит</h2></div><p>Цены из вашей карточки на Яндекс Картах. На готовом сайте прайс обновляется за минуту.</p></div>
+ <div class="pl">
+  <div class="card"><h3>Женская стрижка</h3><div class="o">1 700-2 800 ₽</div><p>Зависит от длины и сложности. Мытьё и укладка входят.</p></div>
+  <div class="card"><h3>Мужская стрижка</h3><div class="o">1 300-1 700 ₽</div><p>Классика, переходы, текстурные стрижки и креативные формы.</p></div>
+  <div class="card"><h3>REMOUNT express</h3><div class="o">3 600 ₽</div><p>Восстановление волос за 10 минут после осветления, фена, плойки, солнца и хлорированной воды.</p></div>
+ </div>
+</div></section>
+
+<section class="team"><div class="w">
+ <div class="label">Отзывы</div><h2>Что пишут гости</h2>
+ <div class="m"><div><h3>Павел Ш.</h3><span>Яндекс Карты</span></div><div><blockquote>«Хожу уже не первый раз и всегда доволен результатом. Мастер Белла стрижёт аккуратно, учитывает форму головы и все пожелания, даёт дельные советы по уходу. Цены адекватные.»</blockquote><cite>сентябрь</cite></div></div>
+ <div class="m"><div><h3>Дмитрий Д.</h3><span>Яндекс Карты</span></div><div><blockquote>«С вечера записался, утром пришёл. Бэлла поняла, как меня подстричь, с двух слов, но сделала ещё лучше! В салоне чисто, уютно, хорошая музычка.»</blockquote><cite>октябрь 2025</cite></div></div>
+ <div class="m"><div><h3>Светлана Н.</h3><span>Яндекс Карты</span></div><div><blockquote>«Запись была день в день, спросили о предпочтениях, сразу предложили помыть голову. После стрижки всё уложили и дали совет, как без напрягов отрастить чёлку. Буду постоянным посетителем!»</blockquote><cite>август 2025</cite></div></div>
+</div></section>
+
+<section class="gal" id="works"><div class="w">
+ <div class="label">Работы</div><h2>До кресла и после</h2><p class="sub">Фото из карточки студии на Яндекс Картах.</p>
+ <div class="grid">
+ <img class="t" src="img/g1.jpg" alt="Медное каре" loading="lazy">
+ <img src="img/g5.jpg" alt="Мужская стрижка с осветлением" loading="lazy">
+ <img class="t" src="img/g2.jpg" alt="Длинные светлые волосы после окрашивания" loading="lazy">
+ <img src="img/g6.jpg" alt="Короткая мужская стрижка с фейдом" loading="lazy">
+ <img src="img/g3.jpg" alt="Укладка локонами" loading="lazy">
+ <img class="t" src="img/g7.jpg" alt="Ирокез" loading="lazy">
+ <img src="img/g4.jpg" alt="Объёмные кудри" loading="lazy">
+ <img src="img/g8.jpg" alt="Детское каре" loading="lazy">
+ <img src="img/g9.jpg" alt="Женская укладка" loading="lazy">
+ <img src="img/g10.jpg" alt="Мужская стрижка, вид сзади" loading="lazy">
+ </div>
+</div></section>
+
+<section class="cont" id="contacts" style="padding-top:0"><div class="w">
+ <div>
+  <div class="label">Контакты</div><h2>Приходите</h2>
+  <div class="row"><small>Адрес</small><b>Колпинское шоссе, 129, Шушары</b></div>
+  <div class="row"><small>Часы работы</small><b>Ежедневно, 10:00-21:00</b></div>
+  <div class="row"><small>Телефон и WhatsApp</small><b><a href="tel:+79818026004">+7 981 802-60-04</a></b></div>
+  <div class="row"><small>Соцсети</small><b><a href="https://vk.ru/originalbeautystudio" target="_blank" rel="noopener">ВКонтакте</a> · <a href="https://t.me/Bella0007" target="_blank" rel="noopener">Telegram</a></b></div>
+  <div class="btns" style="margin-top:26px"><a class="btn" href="https://wa.me/79818026004" target="_blank" rel="noopener">Записаться</a><a class="btn out" href="https://yandex.ru/maps/org/167713249985/" target="_blank" rel="noopener">Маршрут</a></div>
+  <div class="door"><img src="img/door.jpg" alt="Вход в студию с улицы" loading="lazy"><p>Вход с улицы, на первом этаже жилого дома. Рядом парковка.</p></div>
+ </div>
+ <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?oid=167713249985&amp;ol=biz&amp;z=16" loading="lazy" title="Original Beauty Studio на карте"></iframe></div>
+</div></section>
+
+<footer><div class="w"><span>Демо-набросок для Original Beauty Studio. Не является официальным сайтом.</span><span>Сделал <a href="https://tyzgy22-ctrl.github.io/portfolio/">Александр</a> · сайты для салонов</span></div></footer>
+<a class="btn fab" href="https://wa.me/79818026004" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+</body></html>
